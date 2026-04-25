@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cómo calcular días laborables para tus proyectos y contratos — FechasMágicas</title>
+    <meta name="description" content="Aprende a diferenciar entre días naturales, hábiles y laborables. Guía práctica para no cometer errores en plazos legales y entregas de proyectos.">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        :root { --brand: #4f8dff; --brand2: #82b4ff; --dark1: #111b2f; --text-main: #2c3e50; }
+        body { font-family: 'DM Sans', sans-serif; line-height: 1.8; color: var(--text-main); background: #f3f8ff; margin: 0; }
+        nav { background: var(--dark1); padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100; }
+        .nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; color: var(--brand2); text-decoration: none; font-weight: 600; }
+        .back-link { color: white; text-decoration: none; font-size: 0.85rem; border: 1px solid rgba(255,255,255,0.2); padding: 5px 15px; border-radius: 100px; transition: 0.3s; }
+        .back-link:hover { background: var(--brand); border-color: var(--brand); }
+        .container { max-width: 850px; margin: 4rem auto; padding: 3rem; background: white; border-radius: 24px; box-shadow: 0 15px 45px rgba(0,0,0,0.05); }
+        h1 { font-family: 'Cormorant Garamond', serif; font-size: 3.5rem; line-height: 1.1; color: var(--dark1); margin-bottom: 2rem; font-weight: 300; }
+        h2 { font-family: 'Cormorant Garamond', serif; font-size: 2rem; color: var(--brand); margin-top: 2.5rem; }
+        p { margin-bottom: 1.5rem; font-size: 1.15rem; color: #444; }
+        .ad-placeholder { background: #f8f9fa; border: 1px dashed #ced4da; padding: 2rem; text-align: center; margin: 2rem 0; color: #adb5bd; border-radius: 12px; font-size: 0.9rem; }
+        ul { margin-bottom: 1.5rem; padding-left: 1.5rem; }
+        li { margin-bottom: 0.8rem; font-size: 1.1rem; }
+        code { background: #eef3ff; padding: 2px 6px; border-radius: 4px; color: var(--brand); font-family: monospace; }
+        blockquote { border-left: 4px solid var(--brand2); padding-left: 1.5rem; font-style: italic; color: var(--dark1); margin: 2rem 0; font-size: 1.3rem; font-family: 'Cormorant Garamond', serif; }
+        footer { text-align: center; padding: 3rem; color: #7f97b8; font-size: 0.9rem; }
+        @media (max-width: 600px) { .container { padding: 1.5rem; margin: 1rem; } h1 { font-size: 2.2rem; } }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="index.html" class="nav-logo">FechasMágicas</a>
+    <a href="index.html#blog" class="back-link">← Volver al Blog</a>
+</nav>
+
+<div class="container">
+    <article>
+        <h1>Cómo calcular días laborables para tus proyectos y contratos</h1>
+        
+        <p>En el mundo profesional y jurídico, el tiempo no siempre se mide con la misma vara. Mientras que en nuestra vida cotidiana un día es simplemente un período de 24 horas, en el ámbito de los contratos, los plazos administrativos y la gestión de proyectos, el concepto de "día" puede ser una trampa legal. La confusión entre <strong>días naturales, hábiles y laborables</strong> es una de las causas principales de penalizaciones contractuales y pérdida de derechos.</p>
+
+        <div class="ad-placeholder">Anuncio AdSense (Top Header)</div>
+
+        <h2>1. Definiciones clave: No todos los días son iguales</h2>
+        <p>Para evitar malentendidos con clientes o con la administración, el primer paso es dominar la terminología que suele aparecer en la letra pequeña:</p>
+        
+        <ul>
+            <li><strong>Días naturales:</strong> Son todos los días del año sin excepción. Incluyen sábados, domingos y festivos. Si un contrato dice que tienes "15 días naturales" para devolver un producto, el reloj no se detiene nunca.</li>
+            <li><strong>Días hábiles:</strong> Es un término jurídico. Por lo general, excluyen domingos y festivos oficiales. En muchos países (como España), tras las últimas reformas administrativas, los sábados también se consideran inhábiles para la administración pública, pero esto puede variar en el sector privado.</li>
+            <li><strong>Días laborables:</strong> Se refiere a los días en los que efectivamente se trabaja. Normalmente es de lunes a viernes, pero depende totalmente del convenio colectivo o del contrato individual. Para un comercio que abre los sábados, el sábado es un día laborable.</li>
+        </ul>
+
+        <div class="ad-placeholder">Anuncio AdSense (In-Article)</div>
+
+        <h2>2. El factor de los festivos: Locales, regionales y nacionales</h2>
+        <p>Este es el punto donde más errores se cometen en la planificación de proyectos. Al calcular días laborables, especialmente en equipos remotos o internacionales, debemos considerar:</p>
+        <p><strong>Festivos Locales:</strong> Si tu empresa está en Madrid pero tu cliente está en México, los calendarios no coinciden. Un lunes puede ser laborable para ti pero festivo (inhábil) para los plazos de entrega de tu cliente. Siempre se debe especificar qué calendario rige el contrato.</p>
+
+        <h2>3. Herramientas para un cálculo sin errores</h2>
+        <p>No te fíes de tu memoria ni del calendario de mesa. Para proyectos complejos, utiliza la tecnología:</p>
+        <ul>
+            <li><strong>Excel y Google Sheets:</strong> La función <code>=DIAS.LAB(fecha_inicio; fecha_fin; [festivos])</code> es tu mejor aliada. Permite calcular cuántos días de trabajo hay entre dos fechas, restando automáticamente fines de semana y la lista de festivos que tú definas.</li>
+            <li><strong>Software de Gestión:</strong> Herramientas como Asana o Monday permiten configurar el calendario laboral para que las fechas de entrega se muevan solas si caen en festivo.</li>
+        </ul>
+
+        <blockquote>"La precisión en el cálculo de plazos no es solo una cuestión de organización, es una medida de protección legal para tu negocio."</blockquote>
+
+        <div class="ad-placeholder">Anuncio AdSense (Middle Content)</div>
+
+        <h2>4. Cómo se cuentan los plazos legales</h2>
+        <p>La mayoría de las legislaciones siguen un criterio estándar para el cómputo de plazos:</p>
+        <p><strong>El día inicial (Dies a quo):</strong> Normalmente, el cómputo comienza al día siguiente de la notificación o de la firma. Si firmas un lunes y el plazo es de 3 días hábiles, el primer día es el martes.<br>
+        <strong>El día final (Dies ad quem):</strong> El plazo termina a las 24:00 horas del último día. Si este último día es festivo o domingo, el plazo suele prorrogarse automáticamente al siguiente día hábil.</p>
+
+        <h2>Conclusión</h2>
+        <p>Dominar el cálculo de los días laborables separa a los aficionados de los profesionales. Una correcta interpretación de los tiempos no solo te da paz mental, sino que proyecta una imagen de rigor ante socios y clientes. Recuerda: en los negocios, el tiempo es oro, pero solo si sabes contarlo correctamente.</p>
+    </article>
+</div>
+
+<footer>
+    © 2026 FechasMágicas — Productividad y Gestión del Tiempo
+</footer>
+
+</body>
+</html>
