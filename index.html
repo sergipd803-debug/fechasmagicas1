@@ -15,8 +15,6 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="icon" type="image/png" href="favicon.png">
-   
-
 <!-- Google AdSense — sustituye XX-XXXXXXXXXXXXXXXXX por tu ID real -->
 <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXXX" crossorigin="anonymous"></script> -->
 
@@ -28,8 +26,8 @@
 html{scroll-behavior:smooth;font-size:16px}
 body{
   font-family:'DM Sans',sans-serif;
-  background:#e0f2fe;
-  color:#0f172a;
+  background:#f3f8ff;
+  color:#071428;
   overflow-x:hidden;
   line-height:1.6;
 }
@@ -41,17 +39,18 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
    CSS VARIABLES
 ==================================================== */
 :root{
-  --gold:#c9a84c;
-  --gold2:#e8c97a;
-  --gold3:#f5e6c0;
+  --brand:#4f8dff;
+  --brand2:#82b4ff;
+  --brand3:#d9e9ff;
+  --brand4:#a3caff;
   --dark0:#080706;
-  --dark1:#0f0e0c;
-  --dark2:#161512;
-  --dark3:#1e1c19;
-  --dark4:#272420;
-  --text1:#ede8df;
-  --text2:#a09070;
-  --text3:#6b6050;
+  --dark1:#111b2f;
+  --dark2:#1d2c48;
+  --dark3:#293c63;
+  --dark4:#364d78;
+  --text1:#eef3ff;
+  --text2:#b0c6ea;
+  --text3:#7f97b8;
   --radius:14px;
   --radius-lg:20px;
   --transition:.28s cubic-bezier(.4,0,.2,1);
@@ -62,7 +61,7 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
 ==================================================== */
 ::-webkit-scrollbar{width:6px}
 ::-webkit-scrollbar-track{background:var(--dark1)}
-::-webkit-scrollbar-thumb{background:var(--gold);border-radius:3px}
+::-webkit-scrollbar-thumb{background:var(--brand);border-radius:3px}
 
 /* ====================================================
    TYPOGRAPHY
@@ -83,12 +82,12 @@ h1,h2,h3,.serif-text{font-family:'Cormorant Garamond',serif}
 #nav.scrolled{
   background:rgba(8,7,6,0.88);
   backdrop-filter:blur(18px);
-  border-color:rgba(201,168,76,0.12);
+  border-color:rgba(79,139,255,0.12);
 }
 .nav-logo{
   font-family:'Cormorant Garamond',serif;
   font-size:1.55rem;font-weight:600;
-  color:var(--gold2);letter-spacing:0.5px;
+  color:var(--brand2);letter-spacing:0.5px;
   display:flex;align-items:baseline;gap:6px;
 }
 .nav-logo sup{
@@ -98,29 +97,29 @@ h1,h2,h3,.serif-text{font-family:'Cormorant Garamond',serif}
   color:var(--text2);vertical-align:super;
 }
 .nav-links{
-  display:flex;gap:2.5rem;align-items:center;
+  display:flex;gap:2rem;align-items:center;
 }
 .nav-links a{
-  font-size:0.8rem;font-weight:400;
+  font-size:0.85rem;font-weight:400;
   color:var(--text2);letter-spacing:0.5px;
   transition:color var(--transition);
   position:relative;
 }
 .nav-links a::after{
   content:'';position:absolute;bottom:-4px;left:0;right:0;height:1px;
-  background:var(--gold);transform:scaleX(0);
+  background:var(--brand);transform:scaleX(0);
   transition:transform var(--transition);
 }
-.nav-links a:hover{color:var(--gold2)}
+.nav-links a:hover{color:var(--brand2)}
 .nav-links a:hover::after{transform:scaleX(1)}
 .nav-cta{
-  padding:9px 22px;border:1px solid rgba(201,168,76,0.5);
+  padding:9px 22px;border:1px solid rgba(79,139,255,0.5);
   border-radius:100px;font-size:0.78rem;font-weight:500;
-  color:var(--gold2);transition:all var(--transition);
+  color:var(--brand2);transition:all var(--transition);
 }
 .nav-cta:hover{
-  background:rgba(201,168,76,0.12);
-  border-color:var(--gold);
+  background:rgba(79,139,255,0.12);
+  border-color:var(--brand);
 }
 .nav-mobile-toggle{display:none;flex-direction:column;gap:5px;padding:8px;cursor:pointer}
 .nav-mobile-toggle span{display:block;width:22px;height:1.5px;background:var(--text2);transition:all .3s}
@@ -137,16 +136,16 @@ h1,h2,h3,.serif-text{font-family:'Cormorant Garamond',serif}
 .hero-bg{
   position:absolute;inset:0;
   background:
-    radial-gradient(ellipse 80% 50% at 50% -10%,rgba(201,168,76,0.1) 0%,transparent 60%),
-    radial-gradient(ellipse 40% 30% at 20% 80%,rgba(201,168,76,0.05) 0%,transparent 50%),
-    radial-gradient(ellipse 30% 25% at 80% 70%,rgba(201,168,76,0.04) 0%,transparent 50%);
+    radial-gradient(ellipse 80% 50% at 50% -10%,rgba(79,139,255,0.12) 0%,transparent 60%),
+    radial-gradient(ellipse 40% 30% at 20% 80%,rgba(79,139,255,0.06) 0%,transparent 50%),
+    radial-gradient(ellipse 30% 25% at 80% 70%,rgba(79,139,255,0.04) 0%,transparent 50%);
   pointer-events:none;
 }
 .hero-grid{
   position:absolute;inset:0;
   background-image:
-    linear-gradient(rgba(201,168,76,0.04) 1px,transparent 1px),
-    linear-gradient(90deg,rgba(201,168,76,0.04) 1px,transparent 1px);
+    linear-gradient(rgba(79,139,255,0.05) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(79,139,255,0.05) 1px,transparent 1px);
   background-size:60px 60px;
   mask-image:radial-gradient(ellipse 80% 60% at 50% 0%,black 0%,transparent 70%);
   pointer-events:none;
@@ -154,13 +153,13 @@ h1,h2,h3,.serif-text{font-family:'Cormorant Garamond',serif}
 .hero-eyebrow{
   display:inline-flex;align-items:center;gap:10px;
   padding:7px 20px;margin-bottom:2rem;
-  border:1px solid rgba(201,168,76,0.3);border-radius:100px;
+  border:1px solid rgba(79,139,255,0.3);border-radius:100px;
   font-size:0.72rem;letter-spacing:3px;text-transform:uppercase;
-  color:var(--gold2);font-weight:500;
+  color:var(--brand2);font-weight:500;
 }
 .hero-eyebrow::before{
   content:'';display:block;width:5px;height:5px;
-  background:var(--gold);border-radius:50%;
+  background:var(--brand);border-radius:50%;
   animation:pulse 2s ease-in-out infinite;
 }
 @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(0.8)}}
@@ -173,12 +172,12 @@ h1,h2,h3,.serif-text{font-family:'Cormorant Garamond',serif}
 }
 .hero h1 em{
   font-style:italic;
-  background:linear-gradient(135deg,var(--gold3),var(--gold),var(--gold2));
+  background:linear-gradient(135deg,var(--brand3),var(--brand),var(--brand2));
   -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
 }
 .hero-sub{
   font-size:1.05rem;color:var(--text2);
-  max-width:500px;margin:0 auto 3rem;
+  max-width:520px;margin:0 auto 3rem;
   font-weight:300;line-height:1.7;
 }
 .hero-actions{
@@ -187,28 +186,28 @@ h1,h2,h3,.serif-text{font-family:'Cormorant Garamond',serif}
 }
 .btn-primary{
   padding:15px 36px;border-radius:100px;
-  background:linear-gradient(135deg,var(--gold),var(--gold2));
-  color:#080706;font-weight:500;font-size:0.9rem;
+  background:linear-gradient(135deg,var(--brand),var(--brand2));
+  color:#fff;font-weight:500;font-size:0.9rem;
   transition:transform var(--transition),opacity var(--transition);
   letter-spacing:0.3px;
 }
-.btn-primary:hover{transform:translateY(-2px);opacity:0.9}
+.btn-primary:hover{transform:translateY(-2px);opacity:0.95}
 .btn-secondary{
   padding:14px 36px;border-radius:100px;
-  border:1px solid rgba(201,168,76,0.35);
-  color:var(--gold2);font-size:0.9rem;font-weight:400;
+  border:1px solid rgba(79,139,255,0.35);
+  color:var(--brand2);font-size:0.9rem;font-weight:400;
   transition:all var(--transition);
 }
-.btn-secondary:hover{border-color:var(--gold);background:rgba(201,168,76,0.08)}
+.btn-secondary:hover{border-color:var(--brand);background:rgba(79,139,255,0.12)}
 .hero-stats{
   display:flex;gap:4rem;justify-content:center;
   padding-top:3rem;flex-wrap:wrap;
-  border-top:1px solid rgba(201,168,76,0.12);
+  border-top:1px solid rgba(79,139,255,0.12);
 }
 .hero-stat{text-align:center;}
 .hero-stat-num{
   font-family:'Cormorant Garamond',serif;
-  font-size:2.5rem;font-weight:600;color:var(--gold2);
+  font-size:2.5rem;font-weight:600;color:var(--brand2);
   line-height:1;
 }
 .hero-stat-label{
@@ -230,8 +229,29 @@ h1,h2,h3,.serif-text{font-family:'Cormorant Garamond',serif}
 .section-header p{color:var(--text2);font-size:.95rem;font-weight:300}
 .label{
   display:inline-block;font-size:0.68rem;letter-spacing:3px;
-  text-transform:uppercase;color:var(--gold);
+  text-transform:uppercase;color:var(--brand);
   margin-bottom:.8rem;font-weight:500;
+}
+
+/* ====================================================
+   COOKIE BANNER
+==================================================== */
+.cookie-banner{
+  position:fixed;bottom:1.2rem;left:1.2rem;right:1.2rem;
+  z-index:999;
+  background:rgba(7,20,40,0.96);
+  border:1px solid rgba(79,139,255,0.2);
+  border-radius:16px;
+  padding:1rem 1.25rem;
+  display:flex;align-items:center;justify-content:space-between;gap:1rem;
+  box-shadow:0 20px 60px rgba(3,11,28,0.25);
+}
+.cookie-banner p{font-size:.9rem;color:#e8efff;line-height:1.5;flex:1}
+.cookie-banner a{color:var(--brand2);text-decoration:underline}
+.cookie-banner button{
+  padding:12px 20px;border-radius:999px;
+  background:var(--brand);color:#fff;font-size:.9rem;
+  border:1px solid rgba(255,255,255,0.08);
 }
 
 /* ====================================================
@@ -239,7 +259,7 @@ h1,h2,h3,.serif-text{font-family:'Cormorant Garamond',serif}
 ==================================================== */
 .ad-slot{
   background:var(--dark2);
-  border:1px dashed rgba(201,168,76,0.18);
+  border:1px dashed rgba(79,139,255,0.18);
   border-radius:var(--radius);
   padding:1.2rem 2rem;
   text-align:center;
@@ -254,7 +274,7 @@ h1,h2,h3,.serif-text{font-family:'Cormorant Garamond',serif}
   color:var(--text3);border:1px solid rgba(255,255,255,0.08);
   padding:3px 8px;border-radius:4px;white-space:nowrap;
 }
-.ad-slot p{font-size:0.78rem;color:var(--text3)}
+.ad-slot p{font-size:.78rem;color:var(--text3)}
 .ad-slot-wide{height:100px;display:flex;align-items:center;justify-content:center}
 .ad-slot-rect{width:300px;height:250px;margin:0 auto;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:8px}
 
@@ -289,23 +309,22 @@ h1,h2,h3,.serif-text{font-family:'Cormorant Garamond',serif}
   transition:all var(--transition);
   white-space:nowrap;text-align:center;
 }
-.tab.active{background:var(--dark4);color:var(--gold2);box-shadow:0 2px 8px rgba(0,0,0,0.4)}
-.tab:hover:not(.active){color:var(--text1);background:rgba(255,255,255,0.03)}
+.tab.active{background:var(--dark4);color:var(--brand2);box-shadow:0 2px 8px rgba(0,0,0,0.35)}
+.tab:hover:not(.active){color:var(--text1);background:rgba(255,255,255,0.05)}
 
-/* Calculator panels */
 .calc-panel{display:none}
 .calc-panel.active{display:block}
 
 .calc-card{
   background:var(--dark2);
-  border:1px solid rgba(201,168,76,0.15);
+  border:1px solid rgba(79,139,255,0.15);
   border-radius:var(--radius-lg);
   padding:2.5rem;
   position:relative;overflow:hidden;
 }
 .calc-card::before{
   content:'';position:absolute;top:0;left:0;right:0;height:2px;
-  background:linear-gradient(90deg,transparent 0%,var(--gold) 50%,transparent 100%);
+  background:linear-gradient(90deg,transparent 0%,var(--brand) 50%,transparent 100%);
 }
 
 .form-grid{
@@ -324,7 +343,7 @@ label{
 }
 input[type=date],input[type=text],input[type=number],select,textarea{
   background:var(--dark3);
-  border:1px solid rgba(201,168,76,0.15);
+  border:1px solid rgba(79,139,255,0.15);
   border-radius:10px;
   color:var(--text1);
   padding:13px 16px;
@@ -335,10 +354,10 @@ input[type=date],input[type=text],input[type=number],select,textarea{
   width:100%;
 }
 input:focus,select:focus,textarea:focus{
-  border-color:rgba(201,168,76,0.5);
+  border-color:rgba(79,139,255,0.5);
 }
 input[type=date]::-webkit-calendar-picker-indicator{
-  filter:invert(.6) sepia(1) saturate(2) hue-rotate(10deg);
+  filter:invert(.6) sepia(1) saturate(2) hue-rotate(200deg);
   cursor:pointer;
 }
 select option{background:var(--dark3)}
@@ -347,20 +366,19 @@ textarea{resize:vertical;min-height:100px}
 .btn-calc{
   width:100%;padding:16px;
   border-radius:12px;margin-top:0.5rem;
-  background:linear-gradient(135deg,#c9a84c,#e8c97a);
-  color:#080706;font-weight:600;font-size:0.95rem;
+  background:linear-gradient(135deg,var(--brand),var(--brand2));
+  color:#fff;font-weight:600;font-size:0.95rem;
   letter-spacing:0.5px;
   transition:transform var(--transition),opacity var(--transition);
   font-family:'DM Sans',sans-serif;
 }
-.btn-calc:hover{transform:translateY(-2px);opacity:.88}
+.btn-calc:hover{transform:translateY(-2px);opacity:.92}
 
-/* Result boxes */
 .result-box{
   display:none;
   margin-top:2rem;
-  background:rgba(201,168,76,0.06);
-  border:1px solid rgba(201,168,76,0.22);
+  background:rgba(79,139,255,0.06);
+  border:1px solid rgba(79,139,255,0.22);
   border-radius:14px;
   padding:2.5rem;
   text-align:center;
@@ -371,7 +389,7 @@ textarea{resize:vertical;min-height:100px}
 .result-num{
   font-family:'Cormorant Garamond',serif;
   font-size:clamp(3rem,10vw,5.5rem);
-  color:var(--gold2);line-height:1;
+  color:var(--brand2);line-height:1;
   font-weight:600;
 }
 .result-unit{
@@ -381,7 +399,7 @@ textarea{resize:vertical;min-height:100px}
 .result-grid{
   display:flex;gap:2rem;justify-content:center;flex-wrap:wrap;
   padding-top:1.5rem;
-  border-top:1px solid rgba(201,168,76,0.1);
+  border-top:1px solid rgba(79,139,255,0.1);
 }
 .result-item{text-align:center}
 .result-item-val{font-size:1.5rem;font-weight:500;color:var(--text1)}
@@ -395,7 +413,7 @@ textarea{resize:vertical;min-height:100px}
   border-radius:2px;margin-top:1.5rem;overflow:hidden;
 }
 .result-progress-fill{
-  height:100%;background:linear-gradient(90deg,var(--gold),var(--gold2));
+  height:100%;background:linear-gradient(90deg,var(--brand),var(--brand2));
   border-radius:2px;transition:width 1s ease;
 }
 
@@ -409,7 +427,7 @@ textarea{resize:vertical;min-height:100px}
 }
 .tool-card{
   background:var(--dark2);
-  border:1px solid rgba(201,168,76,0.1);
+  border:1px solid rgba(79,139,255,0.1);
   border-radius:var(--radius);
   padding:1.8rem 1.5rem;
   cursor:pointer;
@@ -418,34 +436,34 @@ textarea{resize:vertical;min-height:100px}
 }
 .tool-card:hover{
   transform:translateY(-5px);
-  border-color:rgba(201,168,76,0.35);
+  border-color:rgba(79,139,255,0.35);
   background:var(--dark3);
 }
 .tool-card .badge{
   position:absolute;top:1rem;right:1rem;
   font-size:0.6rem;letter-spacing:1.5px;text-transform:uppercase;
   padding:3px 10px;border-radius:100px;
-  background:rgba(201,168,76,0.1);
-  color:var(--gold);font-weight:500;
+  background:rgba(79,139,255,0.1);
+  color:var(--brand);font-weight:500;
 }
 .tool-icon{font-size:2rem;margin-bottom:1rem}
 .tool-card h3{font-size:.95rem;font-weight:500;margin-bottom:.4rem;color:var(--text1)}
 .tool-card p{font-size:.8rem;color:var(--text2);line-height:1.5}
 .tool-arrow{
   display:inline-flex;align-items:center;gap:4px;
-  font-size:.75rem;color:var(--gold);margin-top:.8rem;
+  font-size:.75rem;color:var(--brand);margin-top:.8rem;
   opacity:0;transition:opacity var(--transition);
 }
 .tool-card:hover .tool-arrow{opacity:1}
 
 /* ====================================================
-   SHOPIFY / REGALOS
+   PROMO / SHOPIFY
 ==================================================== */
 .promo-section{
   padding:3rem 2rem;
-  background:linear-gradient(135deg,rgba(201,168,76,0.08) 0%,transparent 50%);
-  border-top:1px solid rgba(201,168,76,0.1);
-  border-bottom:1px solid rgba(201,168,76,0.1);
+  background:linear-gradient(135deg,rgba(79,139,255,0.08) 0%,transparent 50%);
+  border-top:1px solid rgba(79,139,255,0.1);
+  border-bottom:1px solid rgba(79,139,255,0.1);
 }
 .promo-inner{
   max-width:1160px;margin:0 auto;
@@ -464,7 +482,7 @@ textarea{resize:vertical;min-height:100px}
 }
 .promo-product{
   background:var(--dark2);
-  border:1px solid rgba(201,168,76,0.1);
+  border:1px solid rgba(79,139,255,0.1);
   border-radius:var(--radius);
   overflow:hidden;transition:transform var(--transition);
 }
@@ -473,19 +491,19 @@ textarea{resize:vertical;min-height:100px}
   height:140px;display:flex;align-items:center;justify-content:center;
   font-size:2.5rem;
 }
-.p1-bg{background:linear-gradient(135deg,#1a1008,#2d1e0a)}
-.p2-bg{background:linear-gradient(135deg,#0a0a1a,#1a0a2d)}
-.p3-bg{background:linear-gradient(135deg,#0a1a10,#0a2d1a)}
-.p4-bg{background:linear-gradient(135deg,#1a0a0a,#2d0a10)}
+.p1-bg{background:linear-gradient(135deg,#102042,#1f3c78)}
+.p2-bg{background:linear-gradient(135deg,#09182f,#142e5c)}
+.p3-bg{background:linear-gradient(135deg,#082839,#0e3a5d)}
+.p4-bg{background:linear-gradient(135deg,#11182b,#192e4a)}
 .promo-product-body{padding:1rem}
 .promo-product-body h4{font-size:.85rem;font-weight:500;margin-bottom:.2rem}
 .promo-product-body .price{
   font-family:'Cormorant Garamond',serif;
-  font-size:1.1rem;color:var(--gold2);
+  font-size:1.1rem;color:var(--brand2);
 }
 .shopify-badge{
   display:inline-flex;align-items:center;gap:6px;
-  font-size:.7rem;color:var(--text3);margin-top:.5rem;
+  font-size:.7rem;color:var(--text3);margin-top:1rem;
 }
 .shopify-badge svg{width:14px;height:14px;opacity:.5}
 
@@ -499,13 +517,12 @@ textarea{resize:vertical;min-height:100px}
 }
 .blog-card{
   background:var(--dark2);
-  border:1px solid rgba(201,168,76,0.08);
+  border:1px solid rgba(79,139,255,0.08);
   border-radius:var(--radius-lg);
   overflow:hidden;
   transition:transform var(--transition),border-color var(--transition);
-  cursor:pointer;
 }
-.blog-card:hover{transform:translateY(-4px);border-color:rgba(201,168,76,0.25)}
+.blog-card:hover{transform:translateY(-4px);border-color:rgba(79,139,255,0.25)}
 .blog-thumb{
   height:180px;
   display:flex;align-items:center;justify-content:center;
@@ -516,16 +533,23 @@ textarea{resize:vertical;min-height:100px}
   content:'';position:absolute;bottom:0;left:0;right:0;height:60px;
   background:linear-gradient(to bottom,transparent,var(--dark2));
 }
-.b1{background:linear-gradient(135deg,#140d04,#2e1a06)}
-.b2{background:linear-gradient(135deg,#040d14,#061a2e)}
-.b3{background:linear-gradient(135deg,#04140d,#062e1a)}
-.b4{background:linear-gradient(135deg,#0d0414,#1a062e)}
-.b5{background:linear-gradient(135deg,#140a04,#2e1606)}
-.b6{background:linear-gradient(135deg,#04100d,#06221a)}
-.b7{background:linear-gradient(135deg,#140404,#2e0606)}
-.b8{background:linear-gradient(135deg,#0a0a14,#14142e)}
-.b9{background:linear-gradient(135deg,#0d1404,#1a2e06)}
-.b10{background:linear-gradient(135deg,#140d0a,#2e1e14)}
+.b1{background:linear-gradient(135deg,#091324,#112d5a)}
+.b2{background:linear-gradient(135deg,#041121,#0b2b4f)}
+.b3{background:linear-gradient(135deg,#04131d,#0a3557)}
+.b4{background:linear-gradient(135deg,#0f1125,#1f3a62)}
+.b5{background:linear-gradient(135deg,#121c2f,#1d416d)}
+.b6{background:linear-gradient(135deg,#091c26,#0d3c55)}
+.b7{background:linear-gradient(135deg,#110e1c,#2b2f54)}
+.b8{background:linear-gradient(135deg,#101b27,#172f58)}
+.b9{background:linear-gradient(135deg,#0d1622,#1b3a5b)}
+.b10{background:linear-gradient(135deg,#111726,#24365d)}
+.b11{background:linear-gradient(135deg,#081427,#164e78)}
+.b12{background:linear-gradient(135deg,#0d1b2a,#204d81)}
+.b13{background:linear-gradient(135deg,#08132d,#1b4a7b)}
+.b14{background:linear-gradient(135deg,#091529,#1d4b75)}
+.b15{background:linear-gradient(135deg,#0e1625,#294d79)}
+.b16{background:linear-gradient(135deg,#0b1327,#1f4a76)}
+.b17{background:linear-gradient(135deg,#091428,#1a4974)}
 .blog-body{padding:1.5rem}
 .blog-meta{
   display:flex;align-items:center;gap:8px;
@@ -534,7 +558,7 @@ textarea{resize:vertical;min-height:100px}
 }
 .blog-tag{
   padding:2px 8px;border-radius:100px;
-  background:rgba(201,168,76,0.1);color:var(--gold);
+  background:rgba(79,139,255,0.12);color:var(--brand);
   font-size:.65rem;
 }
 .blog-card h3{
@@ -543,17 +567,56 @@ textarea{resize:vertical;min-height:100px}
 }
 .blog-card p{font-size:.82rem;color:var(--text2);line-height:1.55}
 .blog-read{
-  display:inline-flex;align-items:center;gap:5px;
-  font-size:.75rem;color:var(--gold);margin-top:.8rem;
+  display:inline-flex;
+  align-items:center;
+  gap:5px;
+  font-size:.75rem;
+  color:var(--brand);
+  margin-top:.8rem;
   font-weight:500;
+  cursor:pointer;
+  background:transparent;
+  border:1px solid rgba(79,139,255,0.18);
+  border-radius:999px;
+  padding:10px 16px;
 }
+.blog-read:hover{background:rgba(79,139,255,0.1);}
 
 /* ====================================================
-   COUNTDOWN WIDGET — para compartir
+   ARTICLE VIEWER
+==================================================== */
+.article-viewer{
+  padding:5rem 2rem;
+  max-width:980px;
+  margin:0 auto;
+  background:var(--dark2);
+  border:1px solid rgba(79,139,255,0.12);
+  border-radius:24px;
+}
+.article-viewer.hidden{display:none}
+.article-viewer h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,2.8rem);color:var(--text1);margin-bottom:1rem}
+.article-meta{color:var(--brand2);font-size:.9rem;margin-bottom:1.8rem}
+.article-content p{color:var(--text2);line-height:1.85;margin-bottom:1rem;text-align:justify;}
+.article-content ul{margin:1rem 0 1.5rem 1.3rem;color:var(--text2)}
+.article-content li{margin-bottom:.7rem;text-align:justify;}
+.article-close{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:14px 28px;
+  border-radius:100px;
+  background:rgba(79,139,255,0.12);
+  color:var(--brand2);
+  border:1px solid rgba(79,139,255,0.18);
+}
+.article-close:hover{background:rgba(79,139,255,0.18)}
+
+/* ====================================================
+   COUNTDOWN WIDGET
 ==================================================== */
 .share-widget{
   background:var(--dark2);
-  border:1px solid rgba(201,168,76,0.15);
+  border:1px solid rgba(79,139,255,0.15);
   border-radius:var(--radius-lg);padding:2rem;
   text-align:center;
 }
@@ -565,37 +628,39 @@ textarea{resize:vertical;min-height:100px}
 .share-preview{
   background:var(--dark3);border-radius:var(--radius);
   padding:2rem;margin-bottom:1.5rem;
-  border:1px solid rgba(201,168,76,0.1);
+  border:1px solid rgba(79,139,255,0.1);
 }
 .share-preview .big-num{
   font-family:'Cormorant Garamond',serif;
-  font-size:4rem;font-weight:600;color:var(--gold2);line-height:1;
+  font-size:4rem;font-weight:600;color:var(--brand2);line-height:1;
 }
 .share-preview .big-label{font-size:.8rem;color:var(--text2);margin-top:.3rem}
 .share-btn{
   display:inline-flex;align-items:center;gap:8px;
   padding:12px 24px;border-radius:100px;
-  border:1px solid rgba(201,168,76,0.3);
-  font-size:.82rem;color:var(--gold2);
+  border:1px solid rgba(79,139,255,0.3);
+  font-size:.82rem;color:var(--brand2);
   transition:all var(--transition);
 }
-.share-btn:hover{background:rgba(201,168,76,0.1);border-color:var(--gold)}
+.share-btn:hover{background:rgba(79,139,255,0.1);border-color:var(--brand)}
 
 /* ====================================================
    FAQ
 ==================================================== */
 .faq-list{max-width:720px;margin:0 auto}
 .faq-item{
-  border-bottom:1px solid rgba(201,168,76,0.1);
+  border-bottom:1px solid rgba(79,139,255,0.1);
   padding:1.4rem 0;
 }
 .faq-q{
   display:flex;justify-content:space-between;align-items:center;
   cursor:pointer;gap:1rem;
 }
-.faq-q h3{font-size:.95rem;font-weight:500;color:var(--text1)}
+.faq-q h3{
+  font-size:.95rem;font-weight:500;color:var(--brand2);
+}
 .faq-arrow{
-  font-size:1.2rem;color:var(--gold);
+  font-size:1.2rem;color:var(--brand);
   transition:transform var(--transition);
   flex-shrink:0;
 }
@@ -608,14 +673,14 @@ textarea{resize:vertical;min-height:100px}
   font-size:.88rem;color:var(--text2);
   line-height:1.7;padding-top:1rem;
 }
-.faq-item.open .faq-a{max-height:200px}
+.faq-item.open .faq-a{max-height:300px}
 
 /* ====================================================
-   NEWSLETTER / NOTIFICACIONES
+   NEWSLETTER
 ==================================================== */
 .newsletter-bar{
   background:var(--dark2);
-  border:1px solid rgba(201,168,76,0.15);
+  border:1px solid rgba(79,139,255,0.15);
   border-radius:var(--radius-lg);
   padding:3rem 2.5rem;
   display:grid;grid-template-columns:1fr auto;
@@ -634,11 +699,49 @@ textarea{resize:vertical;min-height:100px}
 }
 .newsletter-form button{
   padding:12px 28px;border-radius:100px;
-  background:linear-gradient(135deg,var(--gold),var(--gold2));
-  color:#080706;font-weight:600;font-size:.85rem;
+  background:linear-gradient(135deg,var(--brand),var(--brand2));
+  color:#fff;font-weight:600;font-size:.85rem;
   transition:transform var(--transition);white-space:nowrap;
 }
 .newsletter-form button:hover{transform:scale(1.03)}
+
+/* ====================================================
+   CONTACT
+==================================================== */
+.contact-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:2rem;
+}
+.contact-card{
+  background:var(--dark2);
+  border:1px solid rgba(79,139,255,0.12);
+  border-radius:var(--radius-lg);
+  padding:2rem;
+}
+.contact-card h3{font-size:1.4rem;color:var(--text1);margin-bottom:1rem}
+.contact-card p, .contact-card li{color:var(--text2);line-height:1.8}
+.contact-card ul{list-style:none;margin-top:1rem;padding-left:0}
+.contact-card li::before{
+  content:'•';color:var(--brand);display:inline-block;width:1rem;
+}
+.contact-form .form-group{margin-bottom:1rem}
+.contact-form button{width:auto;padding:14px 28px}
+
+/* ====================================================
+   LEGAL SECTIONS
+==================================================== */
+.legal-card{
+  background:var(--dark2);
+  border:1px solid rgba(79,139,255,0.12);
+  border-radius:var(--radius-lg);
+  padding:2rem;
+}
+.legal-card h3{font-size:1.3rem;color:var(--text1);margin-bottom:.8rem}
+.legal-card p, .legal-card li{color:var(--text2);line-height:1.8}
+.legal-card a{color:var(--brand2);text-decoration:underline}
+.legal-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem}
+.legal-grid .legal-card{padding:1.8rem}
 
 /* ====================================================
    TRUST STRIP
@@ -647,8 +750,8 @@ textarea{resize:vertical;min-height:100px}
   display:flex;gap:3rem;align-items:center;
   justify-content:center;flex-wrap:wrap;
   padding:2rem;
-  border-top:1px solid rgba(201,168,76,0.08);
-  border-bottom:1px solid rgba(201,168,76,0.08);
+  border-top:1px solid rgba(79,139,255,0.08);
+  border-bottom:1px solid rgba(79,139,255,0.08);
 }
 .trust-item{
   display:flex;align-items:center;gap:10px;
@@ -660,7 +763,7 @@ textarea{resize:vertical;min-height:100px}
    FOOTER
 ==================================================== */
 footer{
-  border-top:1px solid rgba(201,168,76,0.1);
+  border-top:1px solid rgba(79,139,255,0.1);
   padding:5rem 2rem 3rem;
 }
 .footer-inner{
@@ -682,7 +785,7 @@ footer{
   font-size:.85rem;color:var(--text2);
   transition:color var(--transition);
 }
-.footer-links a:hover{color:var(--gold2)}
+.footer-links a:hover{color:var(--brand2)}
 .footer-bottom{
   max-width:1160px;margin:0 auto;
   display:flex;justify-content:space-between;align-items:center;
@@ -691,11 +794,11 @@ footer{
 }
 .footer-bottom p{font-size:.78rem;color:var(--text3)}
 .footer-bottom a{font-size:.78rem;color:var(--text3);transition:color var(--transition)}
-.footer-bottom a:hover{color:var(--gold)}
+.footer-bottom a:hover{color:var(--brand2)}
 .footer-legal{display:flex;gap:2rem;flex-wrap:wrap}
 .schema-logo{
   font-family:'Cormorant Garamond',serif;
-  font-size:1.4rem;color:var(--gold2);font-weight:600;
+  font-size:1.4rem;color:var(--brand2);font-weight:600;
 }
 
 /* ====================================================
@@ -723,6 +826,8 @@ footer{
   .footer-inner{grid-template-columns:1fr 1fr;gap:2rem}
   .promo-inner{grid-template-columns:1fr}
   .newsletter-bar{grid-template-columns:1fr}
+  .contact-grid{grid-template-columns:1fr}
+  .legal-grid{grid-template-columns:1fr}
 }
 @media(max-width:700px){
   .nav-links{display:none}
@@ -734,14 +839,13 @@ footer{
     align-items:center;justify-content:center;
     z-index:199;
   }
-  .nav-links.open a{font-size:1.2rem}
+  .nav-links.open a{font-size:1.1rem}
   .nav-mobile-toggle{display:flex}
   .form-grid{grid-template-columns:1fr}
   .hero-stats{gap:2rem}
   .footer-inner{grid-template-columns:1fr}
   .newsletter-form{flex-direction:column}
   .newsletter-form input[type=email]{width:100%}
-  .promo-products{grid-template-columns:1fr 1fr}
 }
 @media(max-width:480px){
   body{font-size:15px}
@@ -769,7 +873,11 @@ footer{
 
 <body>
 
-<!-- ====== NAVEGACIÓN ====== -->
+<div class="cookie-banner" id="cookieBanner">
+  <p>Usamos cookies propias y de terceros para mejorar tu experiencia, mostrar anuncios relevantes y medir el rendimiento. Al continuar aceptas nuestra <a href="#cookies">política de cookies</a>.</p>
+  <button onclick="acceptCookies()">Aceptar cookies</button>
+</div>
+
 <nav id="nav">
   <div class="nav-logo">FechasMágicas <sup>calculadora</sup></div>
   <div class="nav-links" id="navlinks">
@@ -777,15 +885,15 @@ footer{
     <a href="#herramientas">Herramientas</a>
     <a href="#regalos">Regalos</a>
     <a href="#blog">Artículos</a>
-    <a href="#newsletter">Alertas</a>
-    <a href="#regalos" class="nav-cta">Ver regalos →</a>
+    <a href="#contacto">Contacto</a>
+    <a href="#privacidad">Privacidad</a>
+    <a href="#cookies" class="nav-cta">Cookies</a>
   </div>
   <div class="nav-mobile-toggle" id="toggleNav" onclick="toggleNav()" aria-label="Menú">
     <span></span><span></span><span></span>
   </div>
 </nav>
 
-<!-- ====== HERO ====== -->
 <section class="hero">
   <div class="hero-bg"></div>
   <div class="hero-grid"></div>
@@ -816,11 +924,8 @@ footer{
   </div>
 </section>
 
-<!-- ====== AD SLOT PASO 1 (LEADERBOARD 728x90) ====== -->
 <div style="max-width:760px;margin:0 auto;padding:0 2rem 2rem">
   <div class="ad-slot ad-slot-wide">
-    <!-- PASO 1 (AdSense): Sustituye este bloque por tu código de Google AdSense -->
-    <!-- Ejemplo: <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXX" data-ad-slot="XXXXXXXX" data-ad-format="auto"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({});</script> -->
     <div class="ad-slot-inner">
       <span class="ad-badge">Anuncio</span>
       <p>Espacio 728×90 — Google AdSense · Aquí aparecerán anuncios de bodas, viajes y regalos</p>
@@ -828,7 +933,6 @@ footer{
   </div>
 </div>
 
-<!-- ====== CALCULADORAS PRINCIPALES ====== -->
 <section id="calculadoras">
   <div class="calc-header">
     <span class="label">Paso 2 — Herramienta principal</span>
@@ -836,7 +940,6 @@ footer{
     <p>Elige el tipo de cálculo y obtén el resultado al instante</p>
   </div>
 
-  <!-- Tabs -->
   <div class="calc-tabs" role="tablist">
     <button class="tab active" onclick="showCalc(this,'tab-countdown')">⏳ Cuenta atrás</button>
     <button class="tab" onclick="showCalc(this,'tab-diff')">📅 Diferencia</button>
@@ -848,7 +951,6 @@ footer{
     <button class="tab" onclick="showCalc(this,'tab-luna')">🌙 Luna</button>
   </div>
 
-  <!-- ── CALCULADORA 1: CUENTA ATRÁS ── -->
   <div class="calc-panel active" id="tab-countdown">
     <div class="calc-card">
       <div class="form-grid">
@@ -879,7 +981,6 @@ footer{
     </div>
   </div>
 
-  <!-- ── CALCULADORA 2: DIFERENCIA ── -->
   <div class="calc-panel" id="tab-diff">
     <div class="calc-card">
       <div class="form-grid">
@@ -908,7 +1009,6 @@ footer{
     </div>
   </div>
 
-  <!-- ── CALCULADORA 3: ANIVERSARIO ── -->
   <div class="calc-panel" id="tab-aniversario">
     <div class="calc-card">
       <div class="form-grid">
@@ -950,7 +1050,6 @@ footer{
     </div>
   </div>
 
-  <!-- ── CALCULADORA 4: EMBARAZO ── -->
   <div class="calc-panel" id="tab-embarazo">
     <div class="calc-card">
       <div class="form-grid">
@@ -980,7 +1079,6 @@ footer{
     </div>
   </div>
 
-  <!-- ── CALCULADORA 5: DÍAS LABORABLES ── -->
   <div class="calc-panel" id="tab-laborables">
     <div class="calc-card">
       <div class="form-grid">
@@ -1008,7 +1106,6 @@ footer{
     </div>
   </div>
 
-  <!-- ── CALCULADORA 6: EDAD EXACTA ── -->
   <div class="calc-panel" id="tab-edad">
     <div class="calc-card">
       <div class="form-grid">
@@ -1034,7 +1131,6 @@ footer{
     </div>
   </div>
 
-  <!-- ── CALCULADORA 7: FESTIVOS ── -->
   <div class="calc-panel" id="tab-festivos">
     <div class="calc-card">
       <div class="form-grid">
@@ -1066,7 +1162,6 @@ footer{
     </div>
   </div>
 
-  <!-- ── CALCULADORA 8: LUNA ── -->
   <div class="calc-panel" id="tab-luna">
     <div class="calc-card">
       <div class="form-grid">
@@ -1089,9 +1184,8 @@ footer{
       </div>
     </div>
   </div>
-</section><!-- fin #calculadoras -->
+</section>
 
-<!-- ====== TRUST STRIP ====== -->
 <div class="trust-strip reveal">
   <div class="trust-item"><span class="trust-icon">✓</span> 100% gratuito</div>
   <div class="trust-item"><span class="trust-icon">✓</span> Sin registro</div>
@@ -1100,19 +1194,15 @@ footer{
   <div class="trust-item"><span class="trust-icon">✓</span> Privacidad total</div>
 </div>
 
-<!-- ====== AD SLOT LATERAL / RECTANGLE ====== -->
 <div style="max-width:1160px;margin:3rem auto;padding:0 2rem;display:flex;gap:2rem;flex-wrap:wrap;align-items:flex-start">
   <div style="flex:1;min-width:280px">
     <div class="ad-slot ad-slot-rect" style="height:250px">
-      <!-- PASO 1 (AdSense): Bloque 300×250 -->
-      <!-- <ins class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-XXXXXXXX" data-ad-slot="XXXXXXXX"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({});</script> -->
       <span class="ad-badge">Anuncio</span>
       <p style="font-size:.75rem;color:var(--text3);margin-top:8px">300×250 — AdSense</p>
     </div>
   </div>
   <div style="flex:1;min-width:280px">
     <div class="ad-slot ad-slot-rect" style="height:250px">
-      <!-- PASO 1 (AdSense): Bloque 300×250 afiliado viajes -->
       <span class="ad-badge">Afiliado viajes</span>
       <p style="font-size:.75rem;color:var(--text3);margin-top:8px">Booking.com / TripAdvisor (5–8% comisión)</p>
     </div>
@@ -1125,7 +1215,6 @@ footer{
   </div>
 </div>
 
-<!-- ====== HERRAMIENTAS RÁPIDAS ====== -->
 <section class="section" id="herramientas">
   <div class="section-header reveal">
     <span class="label">Descubre más</span>
@@ -1133,51 +1222,51 @@ footer{
     <p>Cada calculadora está optimizada para un momento de tu vida</p>
   </div>
   <div class="tools-grid">
-    <div class="tool-card reveal" onclick="scrollToCalc('tab-countdown','tab-countdown')">
+    <div class="tool-card reveal" onclick="scrollToCalc('tab-countdown')">
       <span class="badge">Popular</span>
       <div class="tool-icon">💍</div>
       <h3>Cuenta atrás boda</h3>
       <p>Días exactos hasta el gran día. Con horas y minutos en tiempo real.</p>
       <div class="tool-arrow">Calcular →</div>
     </div>
-    <div class="tool-card reveal reveal-delay-1" onclick="scrollToCalc('tab-embarazo','tab-embarazo')">
+    <div class="tool-card reveal reveal-delay-1" onclick="scrollToCalc('tab-embarazo')">
       <span class="badge">Nuevo</span>
       <div class="tool-icon">🤰</div>
       <h3>Calculadora embarazo</h3>
       <p>Semanas, trimestre y fecha probable de parto desde la FUR.</p>
       <div class="tool-arrow">Calcular →</div>
     </div>
-    <div class="tool-card reveal reveal-delay-2" onclick="scrollToCalc('tab-diff','tab-diff')">
+    <div class="tool-card reveal reveal-delay-2" onclick="scrollToCalc('tab-diff')">
       <div class="tool-icon">📅</div>
       <h3>Diferencia entre fechas</h3>
       <p>Cuántos días, meses y años hay entre dos fechas cualesquiera.</p>
       <div class="tool-arrow">Calcular →</div>
     </div>
-    <div class="tool-card reveal reveal-delay-3" onclick="scrollToCalc('tab-aniversario','tab-aniversario')">
+    <div class="tool-card reveal reveal-delay-3" onclick="scrollToCalc('tab-aniversario')">
       <div class="tool-icon">🥂</div>
       <h3>Próximo aniversario</h3>
       <p>Desde bodas de papel hasta bodas de diamante. Sabe cuándo es.</p>
       <div class="tool-arrow">Calcular →</div>
     </div>
-    <div class="tool-card reveal" onclick="scrollToCalc('tab-laborables','tab-laborables')">
+    <div class="tool-card reveal" onclick="scrollToCalc('tab-laborables')">
       <div class="tool-icon">💼</div>
       <h3>Días laborables</h3>
       <p>Calcula días hábiles entre dos fechas sin contar fines de semana.</p>
       <div class="tool-arrow">Calcular →</div>
     </div>
-    <div class="tool-card reveal reveal-delay-1" onclick="scrollToCalc('tab-edad','tab-edad')">
+    <div class="tool-card reveal reveal-delay-1" onclick="scrollToCalc('tab-edad')">
       <div class="tool-icon">🎂</div>
       <h3>Edad exacta</h3>
       <p>Tu edad en años, meses, días y horas. Cuánto falta para el cumple.</p>
       <div class="tool-arrow">Calcular →</div>
     </div>
-    <div class="tool-card reveal reveal-delay-2" onclick="scrollToCalc('tab-festivos','tab-festivos')">
+    <div class="tool-card reveal reveal-delay-2" onclick="scrollToCalc('tab-festivos')">
       <div class="tool-icon">🎄</div>
       <h3>Festivos nacionales</h3>
       <p>Navidad, Reyes, San Valentín, verano... cuánto falta exactamente.</p>
       <div class="tool-arrow">Calcular →</div>
     </div>
-    <div class="tool-card reveal reveal-delay-3" onclick="scrollToCalc('tab-luna','tab-luna')">
+    <div class="tool-card reveal reveal-delay-3" onclick="scrollToCalc('tab-luna')">
       <div class="tool-icon">🌙</div>
       <h3>Fase lunar</h3>
       <p>¿Qué luna habrá en tu fecha especial? Luna llena, cuarto, nueva...</p>
@@ -1186,22 +1275,19 @@ footer{
   </div>
 </section>
 
-<!-- ====== SHOPIFY / REGALOS — PASO 3 ====== -->
 <section class="promo-section" id="regalos">
   <div class="promo-inner">
     <div class="promo-text reveal">
       <span class="label">Paso 3 — Tienda Shopify integrada</span>
       <h2>Haz que tu fecha<br>sea para siempre</h2>
       <p>Cuando alguien calcula que le quedan 95 días para su boda, está listo para comprar. Conectamos cada calculadora con productos personalizados de nuestra tienda: regalos únicos con la fecha grabada.</p>
-      <!-- PASO 3: Sustituye el href por tu URL de tienda Shopify -->
-      <a href="https://tu-tienda.myshopify.com" target="_blank" class="btn-primary" style="display:inline-block">Ver tienda de regalos →</a>
+      <a href="https://tu-tienda.myshopify.com" target="_blank" rel="noopener noreferrer" class="btn-primary" style="display:inline-block">Ver tienda de regalos →</a>
       <div class="shopify-badge" style="margin-top:1rem">
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.89 6.7c-.02-.14-.14-.22-.26-.24l-2.36-.34c0 0-.47-.47-.52-.51-.04-.05-.11-.07-.17-.05l-.83.17C17.17 5.23 16.59 4 15.5 4c-.1 0-.21.01-.31.03-.46-.6-1.04-.9-1.54-.9-.38 0-.69.15-.93.38-.06-.01-.12-.02-.18-.02-1.14 0-1.79.8-1.79 2.32 0 .1.01.21.02.31l-1.31.27a.26.26 0 00-.21.26L8 19.7l11.42 2.14L20.89 6.7z"/></svg>
         Powered by Shopify · Envío 24–48h
       </div>
     </div>
     <div class="promo-products reveal">
-      <!-- PASO 3: Sustituye estos placeholders por tus productos reales de Shopify -->
       <div class="promo-product">
         <div class="promo-product-img p1-bg">🖼️</div>
         <div class="promo-product-body">
@@ -1234,7 +1320,6 @@ footer{
   </div>
 </section>
 
-<!-- ====== BLOG SEO — PASO 4 ====== -->
 <section class="section" id="blog">
   <div class="section-header reveal">
     <span class="label">Paso 4 — Contenido SEO</span>
@@ -1242,110 +1327,172 @@ footer{
     <p>Contenido optimizado para los términos que más se buscan</p>
   </div>
   <div class="blog-grid">
-    <!-- Artículo 1 -->
-    <article class="blog-card reveal" itemscope itemtype="https://schema.org/Article">
+    <article class="blog-card reveal">
       <div class="blog-thumb b1">💍</div>
       <div class="blog-body">
         <div class="blog-meta"><span class="blog-tag">Bodas</span> 8 min</div>
-        <h3 itemprop="headline">Los 12 aniversarios de boda y el regalo perfecto para cada uno</h3>
+        <h3>Los 12 aniversarios de boda y el regalo perfecto para cada uno</h3>
         <p>Desde las bodas de papel (1 año) hasta las bodas de diamante (60 años): significado, tradición e ideas de regalo únicas.</p>
-        <div class="blog-read">Leer artículo →</div>
+        <button class="blog-read" type="button" onclick="openArticle('article1')">Leer artículo →</button>
       </div>
     </article>
-    <!-- Artículo 2 -->
-    <article class="blog-card reveal reveal-delay-1" itemscope itemtype="https://schema.org/Article">
+    <article class="blog-card reveal reveal-delay-1">
       <div class="blog-thumb b2">🤰</div>
       <div class="blog-body">
         <div class="blog-meta"><span class="blog-tag">Embarazo</span> 6 min</div>
-        <h3 itemprop="headline">Semanas de embarazo: todo lo que cambia semana a semana</h3>
+        <h3>Semanas de embarazo: todo lo que cambia semana a semana</h3>
         <p>Guía completa del desarrollo del bebé por semanas, síntomas y qué esperar en cada trimestre.</p>
-        <div class="blog-read">Leer artículo →</div>
+        <button class="blog-read" type="button" onclick="openArticle('article2')">Leer artículo →</button>
       </div>
     </article>
-    <!-- Artículo 3 -->
-    <article class="blog-card reveal reveal-delay-2" itemscope itemtype="https://schema.org/Article">
+    <article class="blog-card reveal reveal-delay-2">
       <div class="blog-thumb b3">✈️</div>
       <div class="blog-body">
         <div class="blog-meta"><span class="blog-tag">Viajes</span> 5 min</div>
-        <h3 itemprop="headline">Checklist de viaje semana a semana: cómo preparar tus vacaciones perfectas</h3>
+        <h3>Checklist de viaje semana a semana: cómo preparar tus vacaciones perfectas</h3>
         <p>Qué hacer 8 semanas antes, 4 semanas antes, 1 semana y el día antes de irte de vacaciones.</p>
-        <div class="blog-read">Leer artículo →</div>
+        <button class="blog-read" type="button" onclick="openArticle('article3')">Leer artículo →</button>
       </div>
     </article>
-    <!-- Artículo 4 -->
-    <article class="blog-card reveal" itemscope itemtype="https://schema.org/Article">
+    <article class="blog-card reveal">
       <div class="blog-thumb b4">🌙</div>
       <div class="blog-body">
         <div class="blog-meta"><span class="blog-tag">Curiosidades</span> 4 min</div>
-        <h3 itemprop="headline">¿Qué día de la semana naciste? Lo que dice la tradición</h3>
+        <h3>¿Qué día de la semana naciste? Lo que dice la tradición</h3>
         <p>El folklore de cada día de la semana: "martes y trece", "lunes al sol"... lo que dice tu día de nacimiento.</p>
-        <div class="blog-read">Leer artículo →</div>
+        <button class="blog-read" type="button" onclick="openArticle('article4')">Leer artículo →</button>
       </div>
     </article>
-    <!-- Artículo 5 -->
-    <article class="blog-card reveal reveal-delay-1" itemscope itemtype="https://schema.org/Article">
+    <article class="blog-card reveal reveal-delay-1">
       <div class="blog-thumb b5">💝</div>
       <div class="blog-body">
         <div class="blog-meta"><span class="blog-tag">Pareja</span> 7 min</div>
-        <h3 itemprop="headline">Cuánto lleváis juntos: cómo celebrar cada hito de pareja</h3>
+        <h3>Cuánto lleváis juntos: cómo celebrar cada hito de pareja</h3>
         <p>1 mes, 100 días, 6 meses, 1 año, 1000 días... ideas para celebrar cada etapa de vuestra relación.</p>
-        <div class="blog-read">Leer artículo →</div>
+        <button class="blog-read" type="button" onclick="openArticle('article5')">Leer artículo →</button>
       </div>
     </article>
-    <!-- Artículo 6 -->
-    <article class="blog-card reveal reveal-delay-2" itemscope itemtype="https://schema.org/Article">
+    <article class="blog-card reveal reveal-delay-2">
       <div class="blog-thumb b6">🎄</div>
       <div class="blog-body">
         <div class="blog-meta"><span class="blog-tag">Festivos</span> 3 min</div>
-        <h3 itemprop="headline">Cuántos días faltan para Navidad: por qué lo buscamos millones</h3>
+        <h3>Cuántos días faltan para Navidad: por qué lo buscamos millones</h3>
         <p>El fenómeno de la cuenta atrás navideña, su origen y cómo hacerla divertida para toda la familia.</p>
-        <div class="blog-read">Leer artículo →</div>
+        <button class="blog-read" type="button" onclick="openArticle('article6')">Leer artículo →</button>
       </div>
     </article>
-    <!-- Artículo 7 -->
-    <article class="blog-card reveal" itemscope itemtype="https://schema.org/Article">
+    <article class="blog-card reveal">
       <div class="blog-thumb b7">💼</div>
       <div class="blog-body">
         <div class="blog-meta"><span class="blog-tag">Trabajo</span> 5 min</div>
-        <h3 itemprop="headline">Cómo calcular días laborables para tus proyectos y contratos</h3>
+        <h3>Cómo calcular días laborables para tus proyectos y contratos</h3>
         <p>Diferencia entre días naturales y hábiles, festivos oficiales y cómo no equivocarse en plazos legales.</p>
-        <div class="blog-read">Leer artículo →</div>
+        <button class="blog-read" type="button" onclick="openArticle('article7')">Leer artículo →</button>
       </div>
     </article>
-    <!-- Artículo 8 -->
-    <article class="blog-card reveal reveal-delay-1" itemscope itemtype="https://schema.org/Article">
+    <article class="blog-card reveal reveal-delay-1">
       <div class="blog-thumb b8">🔢</div>
       <div class="blog-body">
         <div class="blog-meta"><span class="blog-tag">Numerología</span> 6 min</div>
-        <h3 itemprop="headline">Números de la vida: qué significa tu fecha de nacimiento en numerología</h3>
+        <h3>Números de la vida: qué significa tu fecha de nacimiento en numerología</h3>
         <p>Cómo calcular tu número de vida, de destino y de alma a partir de tu fecha de nacimiento.</p>
-        <div class="blog-read">Leer artículo →</div>
+        <button class="blog-read" type="button" onclick="openArticle('article8')">Leer artículo →</button>
       </div>
     </article>
-    <!-- Artículo 9 -->
-    <article class="blog-card reveal reveal-delay-2" itemscope itemtype="https://schema.org/Article">
+    <article class="blog-card reveal reveal-delay-2">
       <div class="blog-thumb b9">🌸</div>
       <div class="blog-body">
         <div class="blog-meta"><span class="blog-tag">Familia</span> 4 min</div>
-        <h3 itemprop="headline">Cuándo es el Día de la Madre en España, México y Argentina</h3>
+        <h3>Cuándo es el Día de la Madre en España, México y Argentina</h3>
         <p>Las fechas no coinciden en todos los países: guía completa por países hispanohablantes.</p>
-        <div class="blog-read">Leer artículo →</div>
+        <button class="blog-read" type="button" onclick="openArticle('article9')">Leer artículo →</button>
       </div>
     </article>
-    <!-- Artículo 10 -->
-    <article class="blog-card reveal" itemscope itemtype="https://schema.org/Article">
+    <article class="blog-card reveal">
       <div class="blog-thumb b10">⏰</div>
       <div class="blog-body">
         <div class="blog-meta"><span class="blog-tag">Curiosidades</span> 5 min</div>
-        <h3 itemprop="headline">Los 10 hitos de edad que cambian tu vida: qué pasa a los 18, 25, 30, 40...</h3>
+        <h3>Los 10 hitos de edad que cambian tu vida: qué pasa a los 18, 25, 30, 40...</h3>
         <p>Legal, biológica y socialmente, estas edades marcan puntos de inflexión. ¿Cuánto te queda?</p>
-        <div class="blog-read">Leer artículo →</div>
+        <button class="blog-read" type="button" onclick="openArticle('article10')">Leer artículo →</button>
+      </div>
+    </article>
+    <article class="blog-card reveal reveal-delay-1">
+      <div class="blog-thumb b11">📆</div>
+      <div class="blog-body">
+        <div class="blog-meta"><span class="blog-tag">Planificación</span> 6 min</div>
+        <h3>Cómo elegir la fecha ideal para tu boda: temporada, clima y presupuesto</h3>
+        <p>Consejos prácticos para seleccionar el día que mejor encaje con tu estilo, invitados y ahorro.</p>
+        <button class="blog-read" type="button" onclick="openArticle('article11')">Leer artículo →</button>
+      </div>
+    </article>
+    <article class="blog-card reveal reveal-delay-2">
+      <div class="blog-thumb b12">🎁</div>
+      <div class="blog-body">
+        <div class="blog-meta"><span class="blog-tag">Regalos</span> 5 min</div>
+        <h3>Regalos personalizados con fecha: ideas para aniversarios y compromisos</h3>
+        <p>Regalos únicos que siempre recuerdan un momento especial: grabados, fechas y detalles memorables.</p>
+        <button class="blog-read" type="button" onclick="openArticle('article12')">Leer artículo →</button>
+      </div>
+    </article>
+    <article class="blog-card reveal">
+      <div class="blog-thumb b13">🗓️</div>
+      <div class="blog-body">
+        <div class="blog-meta"><span class="blog-tag">Organización</span> 5 min</div>
+        <h3>5 herramientas para recordar fechas importantes sin estrés</h3>
+        <p>Apps, calendarios y trucos sencillos para no olvidar aniversarios, citas médicas y viajes.</p>
+        <button class="blog-read" type="button" onclick="openArticle('article13')">Leer artículo →</button>
+      </div>
+    </article>
+    <article class="blog-card reveal reveal-delay-1">
+      <div class="blog-thumb b14">📌</div>
+      <div class="blog-body">
+        <div class="blog-meta"><span class="blog-tag">Eventos</span> 6 min</div>
+        <h3>Comparativa de fechas: boda, viaje, embarazo y eventos familiares</h3>
+        <p>Cómo calcular y sincronizar los momentos más importantes del año para tu familia o pareja.</p>
+        <button class="blog-read" type="button" onclick="openArticle('article14')">Leer artículo →</button>
+      </div>
+    </article>
+    <article class="blog-card reveal reveal-delay-2">
+      <div class="blog-thumb b15">🌗</div>
+      <div class="blog-body">
+        <div class="blog-meta"><span class="blog-tag">Luna</span> 4 min</div>
+        <h3>Cómo usar la fase lunar para elegir una fecha especial</h3>
+        <p>Ideas románticas y simbólicas según la luna nueva, cuarto creciente o luna llena.</p>
+        <button class="blog-read" type="button" onclick="openArticle('article15')">Leer artículo →</button>
+      </div>
+    </article>
+    <article class="blog-card reveal">
+      <div class="blog-thumb b16">✈️</div>
+      <div class="blog-body">
+        <div class="blog-meta"><span class="blog-tag">Ahorro</span> 5 min</div>
+        <h3>¿Cuándo es más rentable comprar tu viaje? Fechas y ofertas clave</h3>
+        <p>Descubre las mejores épocas para reservar vuelo, hotel y paquetes sin sorpresas.</p>
+        <button class="blog-read" type="button" onclick="openArticle('article16')">Leer artículo →</button>
+      </div>
+    </article>
+    <article class="blog-card reveal reveal-delay-1">
+      <div class="blog-thumb b17">✨</div>
+      <div class="blog-body">
+        <div class="blog-meta"><span class="blog-tag">Curiosidades</span> 6 min</div>
+        <h3>Estrellas y fechas: cómo el calendario guía tus noches de observación</h3>
+        <p>Descubre qué constelaciones ver según la estación y por qué la fecha del año cambia el cielo nocturno.</p>
+        <button class="blog-read" type="button" onclick="openArticle('article17')">Leer artículo →</button>
       </div>
     </article>
   </div>
 </section>
 
-<!-- ====== FAQ (SEO) ====== -->
+<section class="article-viewer hidden" id="article-viewer">
+  <div class="section-header">
+    <span class="label">Artículo</span>
+    <h2 id="article-title">Título del artículo</h2>
+    <div class="article-meta" id="article-meta">Categoría · Duración</div>
+  </div>
+  <div class="article-content" id="article-content"></div>
+  <button class="article-close" type="button" onclick="closeArticle()">← Volver al blog</button>
+</section>
+
 <section class="section-sm" style="max-width:840px;margin:0 auto;padding:3rem 2rem">
   <div class="section-header reveal">
     <span class="label">Preguntas frecuentes</span>
@@ -1397,7 +1544,95 @@ footer{
   </div>
 </section>
 
-<!-- ====== NEWSLETTER — PASO 5 ====== -->
+<section class="section-sm" id="contacto">
+  <div class="section-header reveal">
+    <span class="label">Contacto</span>
+    <h2>Escríbenos y recibe ayuda rápida</h2>
+    <p>Estamos aquí para ayudarte con tus cálculos, tu tienda y cualquier duda sobre anuncios o privacidad.</p>
+  </div>
+  <div class="contact-grid">
+    <div class="contact-card reveal">
+      <h3>¿Necesitas ayuda?</h3>
+      <p>Envía tu consulta y te responderemos a la mayor brevedad. Nuestro equipo revisa mensajes sobre calculadoras, contenido y políticas.</p>
+      <ul>
+        <li>Correo: contacto@fechasmagicas.com</li>
+        <li>Teléfono: +34 600 123 456</li>
+        <li>Horario: lun-vie 9:00–18:00 (CET)</li>
+      </ul>
+    </div>
+    <div class="contact-card reveal reveal-delay-1">
+      <form class="contact-form" onsubmit="handleContact(event)">
+        <div class="form-group">
+          <label for="contact-name">Nombre</label>
+          <input type="text" id="contact-name" placeholder="Tu nombre" required>
+        </div>
+        <div class="form-group">
+          <label for="contact-email">Email</label>
+          <input type="email" id="contact-email" placeholder="tu@email.com" required>
+        </div>
+        <div class="form-group full">
+          <label for="contact-message">Mensaje</label>
+          <textarea id="contact-message" placeholder="Escribe tu consulta" required></textarea>
+        </div>
+        <button class="btn-primary" type="submit">Enviar mensaje</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="section-sm" id="privacidad">
+  <div class="section-header reveal">
+    <span class="label">Privacidad</span>
+    <h2>Política de privacidad</h2>
+    <p>Tu seguridad es nuestra prioridad. Conoce cómo tratamos los datos y el uso de cookies.</p>
+  </div>
+  <div class="legal-card reveal">
+    <h3>Protección de datos</h3>
+    <p>Todos los cálculos en FechasMágicas se realizan localmente en tu navegador. No almacenamos tus fechas ni datos personales en nuestros servidores. Si decides enviar un mensaje desde el formulario de contacto, el contenido se envía a través de tu cliente de correo electrónico.</p>
+    <h3>Uso de datos</h3>
+    <p>La información recogida en los formularios será utilizada únicamente para responder a tus consultas y mejorar el servicio. No compartimos datos con terceros, salvo cuando sea necesario para el funcionamiento de servicios de publicidad o análisis que tú hayas aceptado.</p>
+    <h3>Publicidad y terceros</h3>
+    <p>Podemos mostrar anuncios de Google AdSense y contenido de afiliados. Estos servicios pueden usar cookies y datos de navegador según sus propias políticas. Consulta la sección de cookies para más detalles.</p>
+  </div>
+</section>
+
+<section class="section-sm" id="cookies">
+  <div class="section-header reveal">
+    <span class="label">Cookies</span>
+    <h2>Política de cookies</h2>
+    <p>Controla qué cookies aceptas y cómo impactan tu experiencia en el sitio.</p>
+  </div>
+  <div class="legal-card reveal">
+    <h3>Qué usamos</h3>
+    <p>El sitio utiliza cookies y almacenamiento local para:</p>
+    <ul>
+      <li>Guardar tu consentimiento de cookies.</li>
+      <li>Mejorar la navegación y el rendimiento.</li>
+      <li>Mostrar anuncios más relevantes cuando se integra AdSense.</li>
+    </ul>
+    <h3>Cookies de terceros</h3>
+    <p>Al activar los anuncios, los proveedores externos como Google pueden generar cookies propias. Estas cookies facilitan la personalización y el análisis del tráfico.</p>
+    <h3>Gestionar cookies</h3>
+    <p>Puedes aceptar cookies usando el botón en pantalla o borrar tu consentimiento desde el navegador en cualquier momento.</p>
+  </div>
+</section>
+
+<section class="section-sm" id="aviso-legal">
+  <div class="section-header reveal">
+    <span class="label">Aviso legal</span>
+    <h2>Términos y condición</h2>
+    <p>Información general sobre el uso del sitio y las limitaciones de responsabilidad.</p>
+  </div>
+  <div class="legal-card reveal">
+    <h3>Responsabilidad</h3>
+    <p>FechasMágicas ofrece calculadoras y contenido informativo. No garantizamos resultados exactos en situaciones médicas, legales o contractuales. La información proporcionada no sustituye asesoramiento profesional.</p>
+    <h3>Afiliados y anuncios</h3>
+    <p>Algunos enlaces y anuncios pueden ser de afiliados. Esto no incrementa tu precio final. Los ingresos contribuyen al mantenimiento del sitio y al desarrollo de nuevas herramientas.</p>
+    <h3>Modificaciones</h3>
+    <p>Nos reservamos el derecho a actualizar el contenido, las políticas y los servicios en cualquier momento. La versión publicada en este documento es la vigente.</p>
+  </div>
+</section>
+
 <section class="section-sm" id="newsletter" style="max-width:1000px;margin:0 auto;padding:3rem 2rem 6rem">
   <div class="newsletter-bar reveal">
     <div>
@@ -1406,29 +1641,18 @@ footer{
       <p>Te avisamos 30, 7 y 1 día antes. Sin spam. Solo cuando importa.</p>
     </div>
     <form class="newsletter-form" onsubmit="handleNewsletter(event)">
-      <!-- PASO 5: Conecta este form a Mailchimp, ConvertKit o tu herramienta de email -->
-      <!-- Mailchimp: action="https://xxx.us1.list-manage.com/subscribe/post?u=XXXX&id=XXXX" -->
       <input type="email" id="nl-email" placeholder="tu@email.com" required>
       <button type="submit">Activar alertas</button>
     </form>
   </div>
-  <p style="text-align:center;font-size:.75rem;color:var(--text3);margin-top:1rem">Sin spam · Baja cuando quieras · Procesado con <a href="https://mailchimp.com" style="color:var(--text3);text-decoration:underline">Mailchimp</a></p>
+  <p style="text-align:center;font-size:.75rem;color:var(--text3);margin-top:1rem">Sin spam · Baja cuando quieras · Procesado con <a href="https://mailchimp.com" target="_blank" rel="noopener noreferrer" style="color:var(--text3);text-decoration:underline">Mailchimp</a></p>
 </section>
 
-<!-- ====== FOOTER ====== -->
 <footer>
   <div class="footer-inner">
     <div class="footer-brand">
       <div class="schema-logo">FechasMágicas</div>
       <p>La calculadora de fechas especiales más completa en español. Gratis, sin registro y con total privacidad desde 2025.</p>
-      <!-- Redes sociales: descomenta y añade tus URLs reales -->
-      <!--
-      <div style="display:flex;gap:1rem;margin-top:.5rem">
-        <a href="https://instagram.com/fechasmagicas" style="font-size:.82rem;color:var(--text3)">Instagram</a>
-        <a href="https://tiktok.com/@fechasmagicas" style="font-size:.82rem;color:var(--text3)">TikTok</a>
-        <a href="https://pinterest.com/fechasmagicas" style="font-size:.82rem;color:var(--text3)">Pinterest</a>
-      </div>
-      -->
     </div>
     <div class="footer-col">
       <h4>Calculadoras</h4>
@@ -1457,54 +1681,45 @@ footer{
     <div class="footer-col">
       <h4>Legal</h4>
       <div class="footer-links">
-        <!-- PASO 1: Crea estas páginas o añade los textos al final del HTML -->
-        <a href="/aviso-legal">Aviso legal</a>
-        <a href="/privacidad">Política de privacidad</a>
-        <a href="/cookies">Política de cookies</a>
-        <a href="/contacto">Contacto</a>
-        <a href="https://tu-tienda.myshopify.com" target="_blank">Tienda de regalos</a>
+        <a href="#aviso-legal">Aviso legal</a>
+        <a href="#privacidad">Política de privacidad</a>
+        <a href="#cookies">Política de cookies</a>
+        <a href="#contacto">Contacto</a>
+        <a href="https://tu-tienda.myshopify.com" target="_blank" rel="noopener noreferrer">Tienda de regalos</a>
       </div>
     </div>
   </div>
   <div class="footer-bottom">
     <p>© 2025 FechasMágicas. Todos los derechos reservados.</p>
     <div class="footer-legal">
-      <a href="/privacidad">Privacidad</a>
-      <a href="/cookies">Cookies</a>
-      <a href="/aviso-legal">Aviso legal</a>
+      <a href="#privacidad">Privacidad</a>
+      <a href="#cookies">Cookies</a>
+      <a href="#aviso-legal">Aviso legal</a>
     </div>
   </div>
 </footer>
 
-<!-- ====================================================
-     JAVASCRIPT — TODA LA LÓGICA
-==================================================== -->
 <script>
-/* ---- NAV ---- */
 window.addEventListener('scroll',()=>{
   document.getElementById('nav').classList.toggle('scrolled',window.scrollY>30);
 });
 function toggleNav(){
   document.getElementById('navlinks').classList.toggle('open');
 }
-
-/* ---- TABS ---- */
 function showCalc(btn,id){
   document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
   document.querySelectorAll('.calc-panel').forEach(p=>p.classList.remove('active'));
   btn.classList.add('active');
   document.getElementById(id).classList.add('active');
 }
-function scrollToCalc(tabId,panelId){
-  document.querySelectorAll('.tab').forEach((t,i)=>{
+function scrollToCalc(tabId){
+  document.querySelectorAll('.tab').forEach((t)=>{
     if(t.getAttribute('onclick')&&t.getAttribute('onclick').includes(tabId)){
       t.click();
     }
   });
   document.getElementById('calculadoras').scrollIntoView({behavior:'smooth'});
 }
-
-/* ---- HELPERS ---- */
 function fmt(n){return Math.round(n).toLocaleString('es')}
 function fmtDate(d){return d.toLocaleDateString('es-ES',{day:'numeric',month:'short',year:'numeric'})}
 function diasSemana(d){return['Domingo','Lunes','Martes','Miércoles','Jueves','Viernes','Sábado'][d.getDay()]}
@@ -1513,8 +1728,6 @@ function showResult(id){
   el.classList.add('show');
   el.scrollIntoView({behavior:'smooth',block:'nearest'});
 }
-
-/* ---- 1. CUENTA ATRÁS ---- */
 function calcCountdown(){
   const nombre=document.getElementById('cd-nombre').value||'tu evento';
   const val=document.getElementById('cd-fecha').value;
@@ -1522,9 +1735,7 @@ function calcCountdown(){
   const target=new Date(val+'T00:00:00');
   const now=new Date();
   const diff=target-now;
-  if(diff<0){
-    alert('¡Esa fecha ya pasó! Prueba con una futura 😊');return;
-  }
+  if(diff<0){alert('¡Esa fecha ya pasó! Prueba con una futura 😊');return;}
   const dias=Math.floor(diff/86400000);
   const horas=Math.floor(diff/3600000);
   const min=Math.floor(diff/60000);
@@ -1542,8 +1753,6 @@ function calcCountdown(){
   setTimeout(()=>document.getElementById('cd-prog').style.width=prog+'%',100);
   showResult('res-cd');
 }
-
-/* ---- 2. DIFERENCIA ---- */
 function calcDiff(){
   const from=new Date(document.getElementById('df-from').value+'T00:00:00');
   const to=new Date(document.getElementById('df-to').value+'T00:00:00');
@@ -1561,8 +1770,6 @@ function calcDiff(){
   document.getElementById('df-h').textContent=fmt(h);
   showResult('res-df');
 }
-
-/* ---- 3. ANIVERSARIO ---- */
 function calcAniv(){
   const desde=new Date(document.getElementById('an-desde').value+'T00:00:00');
   if(isNaN(desde)){alert('Introduce la fecha de inicio');return}
@@ -1580,12 +1787,9 @@ function calcAniv(){
   document.getElementById('an-dia-sem').textContent=diasSemana(aniv);
   document.getElementById('an-semanas').textContent=fmt(sem);
   const sel=document.getElementById('an-tipo');
-  const tipos=['Bodas de Papel','Bodas de Algodón','Bodas de Cuero','—','Bodas de Madera','—','—','—','—','Bodas de Estaño','—','—','—','—','Bodas de Cristal','—','—','—','—','Bodas de Porcelana','—','—','—','—','Bodas de Plata'];
   document.getElementById('an-msg').textContent=sel.options[sel.selectedIndex].text+' 🥂';
   showResult('res-an');
 }
-
-/* ---- 4. EMBARAZO ---- */
 function calcEmbarazo(){
   const fur=new Date(document.getElementById('emb-fur').value+'T00:00:00');
   if(isNaN(fur)){alert('Introduce la fecha de la última regla');return}
@@ -1607,8 +1811,6 @@ function calcEmbarazo(){
   setTimeout(()=>document.getElementById('emb-prog').style.width=prog+'%',100);
   showResult('res-emb');
 }
-
-/* ---- 5. LABORABLES ---- */
 function calcLaborables(){
   const from=new Date(document.getElementById('lab-from').value+'T00:00:00');
   const to=new Date(document.getElementById('lab-to').value+'T00:00:00');
@@ -1630,8 +1832,6 @@ function calcLaborables(){
   document.getElementById('lab-sem').textContent=fmt(semanas);
   showResult('res-lab');
 }
-
-/* ---- 6. EDAD EXACTA ---- */
 function calcEdad(){
   const nac=new Date(document.getElementById('age-fecha').value+'T00:00:00');
   if(isNaN(nac)){alert('Introduce tu fecha de nacimiento');return}
@@ -1641,7 +1841,6 @@ function calcEdad(){
   const y=Math.floor(dias/365.25);
   const m=Math.floor(dias/30.44);
   const h=Math.floor(diffMs/3600000);
-  // Próximo cumpleaños
   const proxCumple=new Date(nac);
   proxCumple.setFullYear(ahora.getFullYear());
   if(proxCumple<=ahora)proxCumple.setFullYear(ahora.getFullYear()+1);
@@ -1655,8 +1854,6 @@ function calcEdad(){
   document.getElementById('age-msg').textContent=msgs[y%msgs.length];
   showResult('res-age');
 }
-
-/* ---- 7. FESTIVOS ---- */
 function calcFestivo(){
   const ahora=new Date();
   const y=ahora.getFullYear();
@@ -1665,33 +1862,17 @@ function calcFestivo(){
   switch(tipo){
     case'navidad':target=new Date(y,11,24);nombre='🎄 Nochebuena';break;
     case'anonuevo':target=new Date(y+1,0,1);nombre='🎆 Año Nuevo';break;
-    case'reyes':
-      target=new Date(y,0,6);
-      if(target<=ahora)target=new Date(y+1,0,6);
-      nombre='👑 Reyes Magos';break;
-    case'sanvalentin':
-      target=new Date(y,1,14);
-      if(target<=ahora)target=new Date(y+1,1,14);
-      nombre='💝 San Valentín';break;
+    case'reyes':target=new Date(y,0,6);if(target<=ahora)target=new Date(y+1,0,6);nombre='👑 Reyes Magos';break;
+    case'sanvalentin':target=new Date(y,1,14);if(target<=ahora)target=new Date(y+1,1,14);nombre='💝 San Valentín';break;
     case'diadelamadre':
-      // Primer domingo de mayo
       const mayo=new Date(y,4,1);
       while(mayo.getDay()!==0)mayo.setDate(mayo.getDate()+1);
       target=mayo;
       if(target<=ahora){const mayo2=new Date(y+1,4,1);while(mayo2.getDay()!==0)mayo2.setDate(mayo2.getDate()+1);target=mayo2;}
       nombre='🌸 Día de la Madre';break;
-    case'verano':
-      target=new Date(y,5,21);
-      if(target<=ahora)target=new Date(y+1,5,21);
-      nombre='☀️ Inicio del Verano';break;
-    case'halloween':
-      target=new Date(y,9,31);
-      if(target<=ahora)target=new Date(y+1,9,31);
-      nombre='🎃 Halloween';break;
-    case'nochevieja':
-      target=new Date(y,11,31);
-      if(target<=ahora)target=new Date(y+1,11,31);
-      nombre='🎉 Nochevieja';break;
+    case'verano':target=new Date(y,5,21);if(target<=ahora)target=new Date(y+1,5,21);nombre='☀️ Inicio del Verano';break;
+    case'halloween':target=new Date(y,9,31);if(target<=ahora)target=new Date(y+1,9,31);nombre='🎃 Halloween';break;
+    case'nochevieja':target=new Date(y,11,31);if(target<=ahora)target=new Date(y+1,11,31);nombre='🎉 Nochevieja';break;
   }
   if(target<=ahora)target.setFullYear(target.getFullYear()+1);
   const diff=target-ahora;
@@ -1703,13 +1884,10 @@ function calcFestivo(){
   document.getElementById('fest-fecha').textContent=fmtDate(target);
   showResult('res-fest');
 }
-
-/* ---- 8. LUNA ---- */
 function calcLuna(){
   const val=document.getElementById('luna-fecha').value;
   if(!val){alert('Introduce una fecha');return}
   const date=new Date(val+'T12:00:00');
-  // Luna nueva de referencia: 6 ene 2000
   const ref=new Date(2000,0,6,18,14,0);
   const ciclo=29.53058867;
   const diff=(date-ref)/86400000;
@@ -1721,10 +1899,9 @@ function calcLuna(){
   else if(fase<11.5){emoji='🌔';nombre='Luna gibosa creciente';ilum='~75%'}
   else if(fase<16.61){emoji='🌕';nombre='Luna llena';ilum='~100%'}
   else if(fase<18.61){emoji='🌖';nombre='Luna gibosa menguante';ilum='~75%'}
-  else if(fase<22.15){emoji='🌗';nombre='Cuarto menguante';ilum='~50%'}
+  else if(fase<22.15){emoji='🌗';nombre='Luna menguante';ilum='~50%'}
   else if(fase<23.77){emoji='🌘';nombre='Cuarto menguante';ilum='~25%'}
   else{emoji='🌑';nombre='Luna nueva';ilum='0–2%'}
-  // Próxima luna llena
   let diasHastaLlena=ciclo/2-fase;
   if(diasHastaLlena<0)diasHastaLlena+=ciclo;
   const proxLlena=new Date(date);
@@ -1736,29 +1913,378 @@ function calcLuna(){
   document.getElementById('luna-msg').textContent=nombre==='Luna llena'?'✨ ¡Luna llena exactamente en esa fecha!':'La iluminación varía con la distancia Tierra-Luna. Es una aproximación.';
   showResult('res-luna');
 }
-
-/* ---- FAQ ---- */
 function toggleFaq(el){
   el.parentElement.classList.toggle('open');
 }
-
-/* ---- NEWSLETTER ---- */
 function handleNewsletter(e){
   e.preventDefault();
   const email=document.getElementById('nl-email').value;
-  // PASO 5: Sustituir por llamada real a Mailchimp/ConvertKit API
-  alert('¡Genial! Te avisaremos en '+email+' antes de tus fechas especiales. 🎉\n\n[Conecta este form a Mailchimp o ConvertKit para que funcione de verdad]');
+  alert('¡Gracias! Te avisaremos en '+email+' antes de tus fechas especiales. 🎉\n\n[Conecta este form a Mailchimp o ConvertKit para que funcione de verdad]');
+}
+function handleContact(e){
+  e.preventDefault();
+  const name=document.getElementById('contact-name').value.trim();
+  const email=document.getElementById('contact-email').value.trim();
+  const message=document.getElementById('contact-message').value.trim();
+  if(!name||!email||!message){alert('Por favor completa todos los campos.');return}
+  const subject='Consulta desde FechasMágicas: '+name;
+  const body=message+'\n\nNombre: '+name+'\nEmail: '+email;
+  window.location.href=`mailto:contacto@fechasmagicas.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+}
+function acceptCookies(){
+  localStorage.setItem('cookiesAccepted','true');
+  document.getElementById('cookieBanner').style.display='none';
 }
 
-/* ---- COUNTERS (hero) ---- */
-function animCount(el,target,suffix,dur){
-  let v=0;const step=target/(dur/16);
-  const t=setInterval(()=>{
-    v=Math.min(v+step,target);
-    el.textContent=Math.round(v).toLocaleString('es')+suffix;
-    if(v>=target)clearInterval(t);
-  },16);
+const articlesData={
+  article1:{
+    title:'Los 12 aniversarios de boda y el regalo perfecto para cada uno',
+    tag:'Bodas',
+    minutes:'8 min',
+    body:[
+      'Los aniversarios de boda representan hitos importantes en la vida de una pareja, marcando el paso del tiempo y la evolución de su relación. Desde el primer año hasta los más avanzados, cada aniversario tiene un simbolismo único que refleja la fortaleza y el crecimiento del amor compartido. Celebrar estos momentos no solo fortalece el vínculo, sino que también crea recuerdos inolvidables que perduran a lo largo de los años.',
+      'La tradición de los aniversarios de boda se remonta a la antigua Roma, donde se celebraban con coronas de flores para simbolizar la renovación del compromiso matrimonial. Con el tiempo, esta costumbre evolucionó y se asoció con materiales específicos para cada año, representando diferentes aspectos del matrimonio como la fragilidad, la estabilidad y la eternidad. Hoy en día, estas celebraciones siguen siendo una parte integral de la cultura matrimonial en muchos países.',
+      'El primer aniversario, conocido como bodas de papel, simboliza la fragilidad del amor nuevo pero también su capacidad de escritura y renovación. Es un momento para reflexionar sobre los comienzos y planificar el futuro juntos. Los regalos típicos incluyen cartas de amor, diarios compartidos o marcos de fotos personalizados que capturen los primeros momentos de la pareja.',
+      'Para las bodas de algodón en el segundo año, el regalo ideal es algo suave y reconfortante, como una manta o ropa de cama de alta calidad. El algodón representa la comodidad y la calidez que se desarrolla en una relación madura. Es una oportunidad para mostrar aprecio por la estabilidad que se ha construido en los primeros años.',
+      'El tercer aniversario trae las bodas de cuero, simbolizando la resistencia y la flexibilidad. Un regalo apropiado podría ser una cartera, un cinturón o accesorios de cuero que duren años. Este material refleja cómo el matrimonio se adapta a los desafíos de la vida, manteniendo su forma y fuerza a través del tiempo.',
+      'En el quinto año, las bodas de madera representan la solidez y el crecimiento. Regalos como muebles, esculturas o incluso un árbol plantado juntos pueden ser significativos. La madera simboliza raíces profundas y estabilidad, recordando a la pareja que su amor ha echado raíces fuertes.',
+      'Las bodas de hierro del sexto año celebran la resistencia y la durabilidad. Regalos de hierro forjado, como candelabros o decoraciones, son tradicionales. Este aniversario marca un punto en el que la pareja ha superado muchas pruebas, emergiendo más fuertes y unidos.',
+      'El séptimo aniversario trae las bodas de lana, simbolizando calidez y protección. Un suéter tejido a mano o mantas de lana son regalos perfectos. La lana representa el confort que proporciona un matrimonio largo, envolviendo a la pareja en un abrazo cálido y protector.',
+      'Para el décimo aniversario, las bodas de estaño o aluminio representan flexibilidad y maleabilidad. Regalos como vajillas o joyería de estos metales son comunes. Es un momento para celebrar una década de amor y adaptación mutua.',
+      'Las bodas de acero del undécimo año simbolizan la fuerza inquebrantable. Regalos como herramientas o decoraciones de acero pueden ser apropiados. Este aniversario destaca la resiliencia que ha desarrollado la pareja a lo largo de los años.',
+      'El duodécimo aniversario trae las bodas de seda y lino, representando lujo y refinamiento. Tejidos finos, ropa de cama o accesorios de seda son regalos ideales. Estos materiales simbolizan la suavidad y elegancia que se alcanza en un matrimonio maduro.',
+      'Más allá de los doce años, hay aniversarios adicionales como las bodas de perlas (30 años), que simbolizan pureza y valor. Cada uno tiene su propio significado y oportunidades para celebrar.',
+      'Calcular la fecha de tu aniversario es sencillo: simplemente añade el número de años a la fecha de tu boda. Por ejemplo, si te casaste el 15 de junio de 2010, tu quinto aniversario será el 15 de junio de 2015. Usar una calculadora de fechas puede ayudarte a planificar con anticipación.',
+      'Al elegir regalos, considera los intereses personales de tu pareja además del simbolismo tradicional. Un regalo personalizado con la fecha de la boda grabada siempre es una buena opción, ya que añade un toque sentimental único.',
+      'Las celebraciones pueden variar desde cenas románticas hasta viajes especiales. Lo importante es dedicar tiempo de calidad juntos, recordando por qué se enamoraron y celebrando los logros compartidos.',
+      'En la era digital, muchos optan por regalos tecnológicos o experiencias virtuales, pero los tradicionales siguen teniendo un encanto especial. Combina lo moderno con lo clásico para una celebración memorable.',
+      'Recuerda que los aniversarios no son solo sobre regalos materiales, sino sobre renovar votos y compromisos. Una carta sincera o una renovación de votos puede ser el regalo más valioso.',
+      'Si has olvidado un aniversario, no te preocupes; siempre puedes celebrar con retraso. Lo que importa es el esfuerzo y el amor que pones en mantener viva la chispa.',
+      'Para parejas con hijos, involucrar a la familia en la celebración puede hacerla aún más especial. Crear tradiciones familiares alrededor de los aniversarios fortalece los lazos.',
+      'En resumen, los aniversarios de boda son oportunidades para celebrar el amor duradero. Conoce el simbolismo, elige regalos significativos y dedica tiempo a tu pareja para mantener viva la magia del matrimonio.'
+    ]
+  },
+  article2:{
+    title:'Semanas de embarazo: todo lo que cambia semana a semana',
+    tag:'Embarazo',
+    minutes:'6 min',
+    body:[
+      'El embarazo es un viaje de 40 semanas lleno de cambios físicos, emocionales y hormonales. Cada semana trae nuevos desarrollos en el bebé y en el cuerpo de la madre, desde la concepción hasta el nacimiento. Entender estos cambios semana a semana ayuda a las futuras madres a prepararse y a disfrutar del proceso.',
+      'Durante las primeras semanas, de la 1 a la 4, el embrión se implanta y comienza a formarse. Los síntomas pueden incluir fatiga, náuseas leves y cambios en los senos. Es crucial mantener una alimentación saludable y evitar ciertos alimentos para proteger el desarrollo temprano.',
+      'En las semanas 5 a 8, el corazón del bebé comienza a latir y se forman los órganos principales. La madre puede experimentar náuseas matutinas intensas y fatiga extrema. Es el momento de confirmar el embarazo con un médico y comenzar con suplementos como ácido fólico.',
+      'Las semanas 9 a 12 marcan el final del primer trimestre. El bebé ya tiene dedos y puede moverlos. Los síntomas como náuseas suelen disminuir, pero pueden aparecer nuevos como acidez estomacal. Es tiempo de ecografías para verificar el desarrollo.',
+      'El segundo trimestre, semanas 13 a 26, es considerado el más cómodo. El bebé crece rápidamente, desarrollando sentidos y movimientos. La madre puede sentir las primeras patadas y tener más energía. Es ideal para actividades físicas moderadas y clases de preparación al parto.',
+      'En las semanas 27 a 40, el tercer trimestre, el bebé gana peso y se prepara para nacer. La madre puede experimentar hinchazón, dolores de espalda y contracciones de Braxton Hicks. Es crucial monitorear el movimiento fetal y prepararse para el parto.',
+      'Cada semana tiene hitos específicos: en la semana 20, se puede saber el sexo; en la 28, el bebé puede sobrevivir fuera del útero si es necesario. Mantener un diario de embarazo ayuda a recordar estos momentos.',
+      'Los cambios emocionales son tan importantes como los físicos. Muchas mujeres experimentan cambios de humor debido a las hormonas. Apoyo emocional de pareja y familia es esencial.',
+      'La nutrición juega un rol clave: aumentar calorías, consumir proteínas, calcio y hierro. Evitar alcohol, tabaco y ciertos medicamentos es fundamental para la salud del bebé.',
+      'Las visitas médicas regulares permiten monitorear el progreso. Ecografías, análisis de sangre y chequeos ayudan a detectar cualquier complicación temprana.',
+      'Prepararse para el parto incluye clases, elegir un hospital y planificar el nacimiento. Conocer las opciones de analgesia y el proceso del parto reduce la ansiedad.',
+      'Después del nacimiento, el cuarto trimestre es igual de importante. Adaptarse a la nueva vida con el bebé requiere paciencia y apoyo. La lactancia, el sueño y el cuidado postnatal son prioridades.',
+      'Complicaciones como preeclampsia o diabetes gestacional pueden surgir, por lo que es vital estar atento a síntomas inusuales y consultar al médico inmediatamente.',
+      'El apoyo de la pareja es crucial: asistir a citas, ayudar en casa y proporcionar consuelo emocional. La paternidad también es un cambio significativo.',
+      'En resumen, el embarazo semana a semana es una transformación maravillosa. Con conocimiento, preparación y cuidado, se convierte en una experiencia positiva y memorable.'
+    ]
+  },
+  article3:{
+    title:'Checklist de viaje semana a semana: cómo preparar tus vacaciones perfectas',
+    tag:'Viajes',
+    minutes:'5 min',
+    body:[
+      'Planificar unas vacaciones requiere organización para evitar estrés. Un checklist semana a semana asegura que nada se olvide, desde la reserva hasta el regreso. Comenzar con antelación permite encontrar mejores precios y disponibilidad.',
+      'Ocho semanas antes: Elige destino y fechas. Revisa pasaportes, visas y requisitos de entrada. Compara vuelos y alojamientos. Establece un presupuesto aproximado.',
+      'Siete semanas antes: Confirma reservas de vuelo y hotel. Compra seguros de viaje. Investiga actividades y atracciones. Actualiza aplicaciones de viaje en tu teléfono.',
+      'Seis semanas antes: Revisa clima del destino y prepara ropa adecuada. Reserva tours o experiencias especiales. Si viajas con niños, planifica entretenimiento.',
+      'Cinco semanas antes: Organiza transporte desde el aeropuerto. Crea un itinerario diario flexible. Compra divisas si es necesario.',
+      'Cuatro semanas antes: Confirma detalles con el hotel. Prepara maletas mentales: qué llevar. Revisa vacunas y medicamentos necesarios.',
+      'Tres semanas antes: Compra boletos para atracciones. Actualiza contactos de emergencia. Prepara casa para tu ausencia (vecinos, plantas).',
+      'Dos semanas antes: Revisa pronóstico del tiempo. Confirma reservas de restaurantes. Prepara documentos importantes en copia.',
+      'Una semana antes: Haz la maleta principal. Prepara bolsa de mano con essentials. Confirma horarios de vuelo y check-in online.',
+      'Tres días antes: Revisa equipaje. Carga dispositivos electrónicos. Haz compras de último minuto.',
+      'Dos días antes: Limpia casa, desconecta electrodomésticos. Confirma transporte al aeropuerto.',
+      'Un día antes: Descansa. Prepara snacks para el viaje. Revisa itinerario final.',
+      'Día del viaje: Llega al aeropuerto con tiempo. Disfruta el viaje.',
+      'Durante el viaje: Mantén flexibilidad. Toma fotos. Relájate.',
+      'Después del regreso: Deshaz maletas. Revisa fotos. Planifica próximos viajes.',
+      'Usar herramientas como calculadoras de fechas ayuda a sincronizar todo. Aplicaciones de listas de tareas facilitan el seguimiento.',
+      'Errores comunes: Olvidar documentos, no revisar clima, sobreempacar. Evítalos con planificación.',
+      'Viajar en familia requiere consideraciones extra: actividades para niños, seguros médicos, comodidad.',
+      'Presupuesto: Incluye transporte, alojamiento, comida, actividades. Busca ofertas y descuentos.',
+      'Sostenibilidad: Elige opciones eco-friendly, reduce residuos, respeta el medio ambiente.',
+      'En conclusión, un checklist detallado hace que las vacaciones sean perfectas. Disfruta cada momento sin preocupaciones.'
+    ]
+  },
+  article4:{
+    title:'¿Qué día de la semana naciste? Lo que dice la tradición',
+    tag:'Curiosidades',
+    minutes:'4 min',
+    body:[
+      'El día de la semana en que naciste tiene significados tradicionales en muchas culturas. Desde supersticiones hasta interpretaciones astrológicas, conocerlo añade un toque de misterio a tu historia personal.',
+      'En la tradición anglosajona, nacer un lunes se asocia con la luna y la intuición. Los lunes nacidos son considerados sensibles y creativos. Martes con Marte, simbolizando fuerza y determinación.',
+      'Miércoles, día de Mercurio, para comunicadores y viajeros. Jueves, Júpiter, para líderes y optimistas. Viernes, Venus, para amantes y artistas. Sábado, Saturno, para trabajadores y disciplinados.',
+      'Domingo, el sol, para carismáticos y generosos. Estas asociaciones provienen de la astrología clásica y el folclore.',
+      'En España, el "lunes al sol" es una expresión para algo raro o desafortunado, pero no directamente relacionado con nacimientos. "Martes y trece" es considerado de mala suerte.',
+      'Más allá de supersticiones, tu día de nacimiento puede influir en nombres de eventos o celebraciones. Por ejemplo, una boda en un viernes 13 para desafiar la mala suerte.',
+      'Calcular el día de la semana de tu nacimiento es fácil con una calculadora de fechas. Introduce tu fecha y descubre qué día fue.',
+      'En numerología, el día de la semana se combina con números para interpretaciones más profundas. Por ejemplo, un lunes 1 sería doblemente intuitivo.',
+      'Compartir tu día de nacimiento en redes sociales genera conversaciones. "¿Qué día naciste tú?" es una pregunta común que revela curiosidades.',
+      'En algunas culturas, el día de nacimiento determina nombres o apodos. En Japón, hay días de la semana con animales asociados.',
+      'Astrológicamente, el día de nacimiento añade un matiz al signo zodiacal. Un leo nacido en domingo sería más solar y carismático.',
+      'Aunque no hay evidencia científica, estas tradiciones añaden color a la vida. Úsalas para diversión y reflexión personal.',
+      'Regalos personalizados con el día de nacimiento grabado son ideales para cumpleaños. Un collar con "Nacida un viernes" o similar.',
+      'En resumen, el día de la semana de tu nacimiento es más que una fecha; es parte de tu identidad cultural y personal.'
+    ]
+  },
+  article5:{
+    title:'Cuánto lleváis juntos: cómo celebrar cada hito de pareja',
+    tag:'Pareja',
+    minutes:'7 min',
+    body:[
+      'Las parejas celebran más que aniversarios anuales: meses, días y experiencias compartidas son hitos valiosos. Cada uno fortalece el vínculo y crea recuerdos.',
+      'El primer mes: Celebra con una cena romántica. Recuerda cómo empezó todo.',
+      '100 días: Un regalo simbólico, como 100 notas de amor.',
+      '6 meses: Viaje corto o actividad nueva juntos.',
+      '1 año: Renovación de votos o fiesta con amigos.',
+      'Más allá: 500 días, 2 años, etc., cada uno especial.',
+      'Calcular cuánto tiempo lleváis juntos es sencillo con una calculadora de diferencias de fechas. Introduce la fecha de inicio y hoy.',
+      'Significado emocional: Cada hito marca crecimiento. El primer mes es novedad; años son estabilidad.',
+      'Ideas de celebración: Regalos personalizados, experiencias, cartas.',
+      'Mantener viva la conexión: Comunicación abierta, sorpresas, apoyo mutuo.',
+      'Calendario de pareja: Anota fechas importantes para no olvidar.',
+      'Si hay distancia: Celebraciones virtuales con videollamadas.',
+      'Involucrar amigos y familia: Hacerlo comunitario.',
+      'Reflexionar: ¿Qué has aprendido? ¿Cómo has crecido juntos?',
+      'Errores comunes: Olvidar hitos menores, enfocarse solo en años.',
+      'Consejo: Celebra con intención, no por obligación.',
+      'En conclusión, cada hito es una oportunidad para amar más.'
+    ]
+  },
+  article6:{
+    title:'Cuántos días faltan para Navidad: por qué lo buscamos millones',
+    tag:'Festivos',
+    minutes:'3 min',
+    body:[
+      'La cuenta atrás navideña genera emoción global. Millones buscan "cuántos días faltan para Navidad" para planificar celebraciones.',
+      'Orígenes: Navidad marca nacimiento de Jesús, pero hoy es universal: familia, regalos, comida.',
+      'Por qué popular: Final de año, renovación, magia infantil.',
+      'Planificación: Compras, menús, decoraciones, viajes.',
+      'Calculadora de fechas: Introduce 25 diciembre y calcula días restantes.',
+      'Tradiciones: Árbol, villancicos, cartas a Papa Noel.',
+      'En países hispanos: Nochebuena 24 diciembre, Reyes 6 enero.',
+      'Impacto económico: Millones en regalos y viajes.',
+      'Emoción: Anticipación, nostalgia, alegría.',
+      'Consejos: Empieza temprano para evitar estrés.',
+      'Alternativas: Otras fiestas como Hanukkah o Kwanzaa.',
+      'En resumen, Navidad une y motiva planificación.'
+    ]
+  },
+  article7:{
+    title:'Cómo calcular días laborables para tus proyectos y contratos',
+    tag:'Trabajo',
+    minutes:'5 min',
+    body:[
+      'Diferenciar días naturales y laborables es esencial en contratos. Los laborables excluyen fines de semana y festivos.',
+      'Método básico: Cuenta días hábiles entre fechas.',
+      'Herramientas: Calculadoras online, Excel, apps.',
+      'Festivos: Incluye nacionales y locales.',
+      'Ejemplos: Plazos legales, proyectos, vacaciones.',
+      'Errores: Olvidar festivos, mal cálculo.',
+      'Importancia: Evita multas, cumple compromisos.',
+      'En contratos: Especifica días laborables.',
+      'Internacional: Diferencias por país.',
+      'Automatización: Scripts o software.',
+      'Consejo: Siempre verifica manualmente.',
+      'En resumen, precisión en cálculos laborales.'
+    ]
+  },
+  article8:{
+    title:'Números de la vida: qué significa tu fecha de nacimiento en numerología',
+    tag:'Numerología',
+    minutes:'6 min',
+    body:[
+      'Numerología interpreta fechas de nacimiento como números de vida.',
+      'Número de vida: Suma dígitos hasta 1-9.',
+      'Ejemplo: 15/06/1990 → 1+5+6+1+9+9+0=31→3+1=4.',
+      'Significados: 1 líder, 2 cooperativo, etc.',
+      'Número de destino: Similar.',
+      'Compatibilidad: Con parejas.',
+      'Aplicaciones: Nombres, decisiones.',
+      'Críticas: Pseudociencia, pero divertido.',
+      'SEO: Bueno para contenido de fechas.',
+      'En resumen, herramienta de autoconocimiento.'
+    ]
+  },
+  article9:{
+    title:'Cuándo es el Día de la Madre en España, México y Argentina',
+    tag:'Familia',
+    minutes:'4 min',
+    body:[
+      'Día de la Madre varía por país.',
+      'España: Primer domingo de mayo.',
+      'México: 10 de mayo.',
+      'Argentina: Tercer domingo de octubre.',
+      'Orígenes: Tradición religiosa y comercial.',
+      'Celebraciones: Regalos, flores, comidas.',
+      'Importancia: Honrar madres.',
+      'Si internacional: Calendarios ayudan.',
+      'Regalos: Personalizados con fecha.',
+      'En resumen, conoce fechas para celebrar.'
+    ]
+  },
+  article10:{
+    title:'Los 10 hitos de edad que cambian tu vida: qué pasa a los 18, 25, 30, 40...',
+    tag:'Curiosidades',
+    minutes:'5 min',
+    body:[
+      'Edades marcan cambios: legales, biológicos, sociales.',
+      '18: Mayoría de edad, independencia.',
+      '21: Beber legalmente en algunos países.',
+      '25: Inicio adultez real.',
+      '30: Crisis, reflexión.',
+      '40: Balance, madurez.',
+      '50: Mitad de vida.',
+      '60: Jubilación cercana.',
+      '70: Sabiduría.',
+      '80: Legado.',
+      '100: Centenario.',
+      'Celebrar: Con propósito.',
+      'En resumen, edades como puentes.'
+    ]
+  },
+  article11:{
+    title:'Cómo elegir la fecha ideal para tu boda: temporada, clima y presupuesto',
+    tag:'Planificación',
+    minutes:'6 min',
+    body:[
+      'Elegir fecha boda: clima, presupuesto, invitados.',
+      'Temporada: Verano popular, invierno íntimo.',
+      'Clima: Evita lluvia.',
+      'Presupuesto: Fechas festivas más caras.',
+      'Días: Fines de semana vs. laborables.',
+      'Festivos: Evita conflictos.',
+      'Disponibilidad: Proveedores, iglesia.',
+      'Personal: Significado sentimental.',
+      'Herramientas: Calculadoras para planificar.',
+      'Consejo: Flexibilidad.',
+      'En resumen, fecha que encaje.'
+    ]
+  },
+  article12:{
+    title:'Regalos personalizados con fecha: ideas para aniversarios y compromisos',
+    tag:'Regalos',
+    minutes:'5 min',
+    body:[
+      'Regalos con fecha: eternos recuerdos.',
+      'Joyas grabadas: Anillos, collares.',
+      'Marcos fotos: Con fecha boda.',
+      'Copas: Grabadas aniversarios.',
+      'Libros: Historias personalizadas.',
+      'Afiliados: Monetiza con productos.',
+      'Ideas: Relojes, llaveros.',
+      'Por qué: Personalización conecta.',
+      'En resumen, regalos únicos.'
+    ]
+  },
+  article13:{
+    title:'5 herramientas para recordar fechas importantes sin estrés',
+    tag:'Organización',
+    minutes:'5 min',
+    body:[
+      'Herramientas recordar fechas: calendarios, apps.',
+      'Google Calendar: Recordatorios.',
+      'Apps: Todoist, Notion.',
+      'Calculadoras fechas: Para aniversarios.',
+      'Listas papel: Simples.',
+      'Consejo: Revisar mensualmente.',
+      'En resumen, organización evita olvidos.'
+    ]
+  },
+  article14:{
+    title:'Comparativa de fechas: boda, viaje, embarazo y eventos familiares',
+    tag:'Eventos',
+    minutes:'6 min',
+    body:[
+      'Comparar fechas: Evita solapamientos.',
+      'Herramientas: Calculadoras diferencias.',
+      'Ejemplo: Boda, viaje, embarazo.',
+      'Plan maestro: Calendario.',
+      'Priorizar: Lo importante primero.',
+      'En resumen, sincronización clave.'
+    ]
+  },
+  article15:{
+    title:'Cómo usar la fase lunar para elegir una fecha especial',
+    tag:'Luna',
+    minutes:'4 min',
+    body:[
+      'Fases lunares: Simbolismo romántico.',
+      'Luna llena: Bodas, intensidad.',
+      'Luna nueva: Nuevos comienzos.',
+      'Cálculo: Ciclo 29.53 días.',
+      'Herramientas: Apps lunares.',
+      'En resumen, magia lunar.'
+    ]
+  },
+  article16:{
+    title:'¿Cuándo es más rentable comprar tu viaje? Fechas y ofertas clave',
+    tag:'Ahorro',
+    minutes:'5 min',
+    body:[
+      'Reservar anticipado: Más barato.',
+      'Fechas ofertas: Temporada baja.',
+      'Herramientas: Comparadores precios.',
+      'Calendarios: Planificar compras.',
+      'En resumen, ahorro con planificación.'
+    ]
+  },
+  article17:{
+    title:'Estrellas y fechas: cómo el calendario guía tus noches de observación',
+    tag:'Curiosidades',
+    minutes:'6 min',
+    body:[
+      'Mirar el cielo nocturno y reconocer las estrellas puede parecer un pasatiempo romántico, pero también es una actividad que depende directamente de la fecha en el calendario. Cada estación del año abre un nuevo conjunto de constelaciones y cambia la visibilidad de los objetos celestes más brillantes.',
+      'En primavera, la Vía Láctea se eleva en el cielo con más fuerza y las constelaciones de Leo, Virgo y Bootes son protagonistas. Estas estrellas son visibles durante varias horas tras la puesta de sol y permiten orientarse fácilmente gracias a su brillo característico.',
+      'El verano trae consigo las famosas constelaciones del triángulo de verano: Vega, Deneb y Altair. Estas estrellas brillantes forman un triángulo casi perfecto en el cielo y son un punto de referencia ideal para los observadores novatos. El 12 de agosto, además, se produce la lluvia de meteoros de las Perseidas.',
+      'El otoño es el momento de las constelaciones del cuervo, Pegaso y Andrómeda. En estas fechas, la prolongación de la noche permite ver más estrellas con mayor claridad, y es el mejor momento para buscar la galaxia de Andrómeda sin necesidad de un telescopio potente.',
+      'En invierno, el cielo se llena de constelaciones brillantes como Orión, Tauro y Géminis. Orión es especialmente fácil de localizar por las tres estrellas de su cinturón, y el cúmulo de las Pléyades aparece cercano, lo que convierte a esta época en la favorita de los aficionados a la astronomía. La fecha dicta qué estrellas serán visibles temprano en la noche.',
+      'Además de las estaciones, otras fechas astronómicas son fundamentales para los observadores. Las fechas de luna nueva son perfectas para ver nebulosas y galaxias porque el cielo está más oscuro. Por el contrario, la luna llena es ideal para observar cráteres lunares, pero dificulta la visibilidad de estrellas más débiles.',
+      'Si quieres planificar una salida a observar estrellas, usar un calendario astrológico o una aplicación de astronomía te permite elegir la mejor fecha. Elegir una noche sin luna y con baja contaminación lumínica maximiza las posibilidades de disfrutar de un cielo espectacular.',
+      'En distintos momentos del año también cambia la posición de planetas como Júpiter, Saturno y Marte. Estos objetos brillantes pueden verse a simple vista y su aparición en el calendario es una excusa perfecta para salir al campo con binoculares o un telescopio sencillo.',
+      'La relación entre fechas y estrellas también aparece en festividades populares. En muchas culturas, el inicio de la primavera o del verano se celebraba al mirar ciertas constelaciones. Hoy, esas mismas fechas nos ayudan a recordar cuándo buscar el primer lucero vespertino o la aparición de la Vía Láctea en todo su esplendor.',
+      'Para los aficionados a la fotografía, las fechas de las lluvias de meteoros son especialmente atractivas. Las Perseidas en agosto y las Gemínidas en diciembre son dos eventos clave que se pueden planificar con meses de antelación. Anotar estas fechas en el calendario garantiza estar preparado con tiempo para capturar el espectáculo.',
+      'Las estrellas fijas de las constelaciones actúan como un calendario natural. En el hemisferio norte, la Estrella Polar permanece en la misma posición y sirve de guía para orientarse. Sin embargo, la constelación que la rodea cambia ligeramente con las estaciones, lo que hace que cada noche sea única.',
+      'Además de las constelaciones tradicionales, algunas estrellas tienen fechas de aparición especial en el cielo nocturno. Por ejemplo, la estrella brillante Sirio es muy visible durante el invierno boreal, y su salida helíaca marcaba fechas importantes en la antigua civilización egipcia.',
+      'Las aplicaciones modernas simplifican este aprendizaje. Introducir una fecha en una app de astronomía te indica qué constelaciones y planetas serán visibles. Estas herramientas combinan calendario y geolocalización para mostrar un mapa del cielo adaptado a tu ubicación.',
+      'Un buen consejo para principiantes es empezar por las fechas de los equinoccios y solsticios. Estos días marcan el principio de cada estación y suelen coincidir con cambios importantes en el patrón del cielo nocturno. Llevar un calendario de observación te ayuda a establecer una rutina anual.',
+      'La observación de estrellas también puede convertirse en un viaje temático. Por ejemplo, puedes planificar una noche de observación de constelaciones veraniegas o una sesión de invierno dedicada a Orión y las Pléyades. Elegir fechas específicas añade emoción al paseo bajo las estrellas.',
+      'Si visitas un lugar nuevo, investigar las fechas y las constelaciones visibles en esa latitud es fundamental. El cielo del hemisferio sur muestra patrones distintos a los del norte, y la fecha del año determina cuáles son las ferias astronómicas y los planetarios más interesantes para visitar.',
+      'Los amantes del turismo astronómico suelen elegir destinos con cielos oscuros en fechas cercanas a la luna nueva. Parques nacionales y reservas de cielo oscuro son los mejores escenarios para estas salidas, y reservar con antelación una fecha de observación puede hacer la diferencia entre una experiencia mediocre y una inolvidable.',
+      'También es interesante notar que la fecha no solo influye en qué estrellas ves, sino en cómo se ven. En verano, las noches son más cálidas y largas, lo que facilita la observación tardía. En invierno, el aire frío tiende a ser más transparente, lo que da estrellas más nítidas, aunque requiere abrigarse bien.',
+      'Finalmente, combinar fechas con curiosidades astronómicas convierte cada salida en una historia. Saber qué constelación estaba alta en el cielo cuando naciste o qué estrella domina la noche en tu cumpleaños añade un punto personal a la observación. Por eso, el calendario y las estrellas son compañeros inseparables en el viaje de la astronomía.'
+    ]
+  }
+};
+
+function openArticle(id){
+  const data=articlesData[id];
+  if(!data) return;
+  document.getElementById('article-title').textContent=data.title;
+  document.getElementById('article-meta').textContent=`${data.tag} · ${data.minutes}`;
+  const content=document.getElementById('article-content');
+  content.innerHTML='';
+  data.body.forEach(text=>{
+    const p=document.createElement('p');
+    p.textContent=text;
+    content.appendChild(p);
+  });
+  document.getElementById('article-viewer').classList.remove('hidden');
+  document.getElementById('article-viewer').scrollIntoView({behavior:'smooth',block:'start'});
 }
+function closeArticle(){
+  document.getElementById('article-viewer').classList.add('hidden');
+  document.getElementById('blog').scrollIntoView({behavior:'smooth',block:'start'});
+}
+
 const heroObs=new IntersectionObserver(entries=>{
   entries.forEach(e=>{
     if(e.isIntersecting){
@@ -1770,28 +2296,34 @@ const heroObs=new IntersectionObserver(entries=>{
     }
   });
 },{threshold:.3});
-heroObs.observe(document.querySelector('.hero-stats'));
-
-/* ---- REVEAL ON SCROLL ---- */
+function animCount(el,target,suffix,dur){
+  let v=0;const step=target/(dur/16);
+  const t=setInterval(()=>{
+    v=Math.min(v+step,target);
+    el.textContent=Math.round(v).toLocaleString('es')+suffix;
+    if(v>=target)clearInterval(t);
+  },16);
+}
 const revealObs=new IntersectionObserver(entries=>{
-  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible')}});
+  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible')}}); 
 },{threshold:.08,rootMargin:'0px 0px -40px 0px'});
 document.querySelectorAll('.reveal,.reveal-scale').forEach(el=>revealObs.observe(el));
 
-/* ---- SET TODAY as default dates ---- */
 window.addEventListener('load',()=>{
   const today=new Date().toISOString().split('T')[0];
   ['df-from','lab-from','luna-fecha','age-fecha'].forEach(id=>{
     const el=document.getElementById(id);
     if(el)el.value=today;
   });
-  // Default future date for countdown
   const future=new Date();future.setMonth(future.getMonth()+6);
   const futureStr=future.toISOString().split('T')[0];
   ['cd-fecha','df-to','lab-to'].forEach(id=>{
     const el=document.getElementById(id);
     if(el)el.value=futureStr;
   });
+  if(localStorage.getItem('cookiesAccepted')) document.getElementById('cookieBanner').style.display='none';
+  const heroStats=document.querySelector('.hero-stats');
+  if(heroStats) heroObs.observe(heroStats);
 });
 </script>
 </body>
