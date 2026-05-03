@@ -3301,6 +3301,34 @@
             const heroStats = document.querySelector('.hero-stats');
             if (heroStats) heroObs.observe(heroStats);
         });
+        // (Aquí arriba estarán tus otras funciones, como openArticle, showTab, etc.)
+
+        // --- SISTEMA PARA LEER LA URL LIMPIA EN GITHUB PAGES ---
+        window.addEventListener('DOMContentLoaded', () => {
+            const redirect = sessionStorage.getItem('redirectURL');
+            if (redirect) {
+                // Borramos el dato para que no se quede en bucle
+                sessionStorage.removeItem('redirectURL');
+                
+                // Restauramos la URL limpia en la barra de direcciones
+                window.history.replaceState(null, null, redirect);
+                
+                // Quitamos la barra "/" inicial para quedarnos solo con el nombre del artículo
+                const slugBuscado = redirect.substring(1);
+                
+                // Buscamos qué artículo tiene ese slug y lo abrimos
+                for (const [id, data] of Object.entries(articlesData)) {
+                    if (data.slug === slugBuscado) {
+                        openArticle(id);
+                        break;
+                    }
+                }
+            }
+        });
+        // --------------------------------------------------------
+    </script>
+</body>
+</html>
     </script>
 </body>
 
