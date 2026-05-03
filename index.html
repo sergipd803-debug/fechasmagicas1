@@ -3225,14 +3225,6 @@
     const content = document.getElementById('article-content');
     content.innerHTML = '';
 
-    if (data.image) {
-        const img = document.createElement('img');
-        img.src = data.image;
-        img.style.width = '100%';
-        img.style.borderRadius = '12px';
-        img.style.marginBottom = '20px';
-        content.appendChild(img);
-    }
 
     data.body.forEach(text => {
         const p = document.createElement('p');
