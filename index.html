@@ -3213,27 +3213,39 @@
         };
 
         function openArticle(id) {
-            const data = articlesData[id];
-            if (!data) return;
+    const data = articlesData[id];
+    if (!data) return;
 
-            // SEO Mejora de la URL
-            if (data.slug) window.history.pushState(null, null, '/' + data.slug);
+    // Aquí está la URL limpia con la barra en lugar del #
+    if (data.slug) window.history.pushState(null, null, '/' + data.slug);
 
-            document.getElementById('article-title').textContent = data.title;
-            document.getElementById('article-meta').textContent = `${data.tag} · ${data.minutes}`;
-            const content = document.getElementById('article-content');
-            content.innerHTML = '';
-            data.body.forEach(text => {
-                const p = document.createElement('p');
-                p.innerHTML = text;
-                content.appendChild(p);
-            });
-            document.getElementById('article-viewer').classList.remove('hidden');
-            document.getElementById('article-viewer').scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
-        }
+    document.getElementById('article-title').textContent = data.title;
+    document.getElementById('article-meta').textContent = `${data.tag} · ${data.minutes}`;
+    
+    const content = document.getElementById('article-content');
+    content.innerHTML = '';
+
+    if (data.image) {
+        const img = document.createElement('img');
+        img.src = data.image;
+        img.style.width = '100%';
+        img.style.borderRadius = '12px';
+        img.style.marginBottom = '20px';
+        content.appendChild(img);
+    }
+
+    data.body.forEach(text => {
+        const p = document.createElement('p');
+        p.innerHTML = text; 
+        content.appendChild(p);
+    });
+
+    document.getElementById('article-viewer').classList.remove('hidden');
+    document.getElementById('article-viewer').scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+    });
+}
 
         function closeArticle() {
             // SEO Limpieza de la URL al cerrar el artículo
