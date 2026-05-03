@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Cargando...</title>
+    <script>
+      // Guarda la URL que el usuario intentó cargar (ej: /los-12-aniversarios)
+      sessionStorage.setItem('redirectURL', window.location.pathname);
+      // Lo manda de vuelta a la página principal silenciosamente
+      window.location.replace('/');
+    </script>
+  </head>
+  <body></body>
+</html>
