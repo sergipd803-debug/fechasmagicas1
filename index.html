@@ -3206,7 +3206,7 @@
             content.innerHTML = '';
             data.body.forEach(text => {
                 const p = document.createElement('p');
-                p.textContent = text;
+                p.innerHTML = text;
                 content.appendChild(p);
             });
             document.getElementById('article-viewer').classList.remove('hidden');
